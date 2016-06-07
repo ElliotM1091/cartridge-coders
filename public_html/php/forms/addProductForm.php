@@ -45,7 +45,8 @@
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="price">Price</label>
+		<label> for="price">Price</label>
+		<p class="fee">*There is a administration fee of 1.99 for all items sold</p>
 		<div class="input-group">
 			<div class="input-group-addon">
 				<i class="fa fa-usd" aria-hidden="true"></i>
@@ -68,7 +69,7 @@
 			<div class="input-group-addon">
 				<i class="fa fa-file-image-o" aria-hidden="true"></i>
 			</div>
-			<input type="file" class="form-control" id="shipping" name="image" placeholder="jpg/png">
+			<input  type="file" class="form-control" id="shipping" name="image" placeholder="jpg/png">
 		</div>
 	</div>
 	<div class="form-group">
@@ -77,7 +78,7 @@
 			<div class="input-group-addon">
 				<i class="fa fa-pencil" aria-hidden="true"></i>
 			</div>
-			<textarea class="form-control" rows="5" id="description" name="description" placeholder="Description"></textarea>
+			<textarea class="form-control" rows="5" id="description" name="description" placeholder="Description(255 Characters total)"></textarea>
 		</div>
 	</div>
 	<button class="btn btn-success" type="submit"><i class="fa fa-paper-plane"></i> Send</button>
