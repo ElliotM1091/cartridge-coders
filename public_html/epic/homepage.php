@@ -32,7 +32,7 @@
 				  crossorigin="anonymous"></script>
 		<title>ROMuLess</title>
 	</head>
-	<body>
+	<body class="sfooter">
 		<div class="sfooter">
 
 			<!-- header -->
@@ -67,7 +67,8 @@
 											href="https://www.sandbox.paypal.com/webapps/auth/protocol/openidconnect/v1/authorize?client_id=AWoiHG8w-yaeYyODSBIzJ-awWkLVPo7G9zWJMomAFeMTVw5wyRG_b2pyYxl7a7wB7ByjVLJ0aQ6FdVDj&response_type=code&scope=openid email profile&redirect_uri=https://bootcamp-coders.cnm.edu/~ddeleeuw/cartridge-coders/public_html/return.php"><img
 												src="https://www.paypalobjects.com/webstatic/en_US/developer/docs/lipp/loginwithpaypalbutton.png"></a>
 									</li>
-									<li><a href="../../paypal/expresscheckout.php"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a></li>
+									<li><a href="../../paypal/expresscheckout.php"><i class="fa fa-shopping-cart fa-2x"
+																									  aria-hidden="true"></i></a></li>
 								</ul>
 							</div><!-- /.navbar-collapse -->
 						</div><!-- /.container-fluid -->
@@ -116,38 +117,161 @@
 			<!-- contents -->
 			<section id="feature" class="p-y-4">
 				<div class="container">
-					<div class="row row-flex" </div>
-						<div class="col-sm-6 col-md-4">
-							<div class="thumbnail">
-								<img src="..." alt="...">
-								<div class="caption">
-									<h3>Title</h3>
-									<p>Discription</p>
-									<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+					<div class="row row-flex"
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<img src="..." alt="...">
+						<div class="caption">
+							<h3>Title</h3>
+							<p>Price</p>
+							<p>Discription</p>
+							<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add to cart<i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<img src="..." alt="...">
+						<div class="caption">
+							<h3>Title</h3>
+							<p>Price</p>
+							<p>Discription</p>
+							<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add to cart<i class="fa fa-shopping-cart " aria-hidden="true"></i></a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<img src="..." alt="...">
+						<div class="caption">
+							<h3>Title</h3>
+							<p>Price</p>
+							<p>Discription</p>
+							<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add to cart<i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row row-flex"
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<img src="..." alt="...">
+						<div class="caption">
+							<h3>Title</h3>
+							<p>Price</p>
+							<p>Discription</p>
+							<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add to cart<i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<img src="..." alt="...">
+						<div class="caption">
+							<h3>Title</h3>
+							<p>Price</p>
+							<p>Discription</p>
+							<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add to cart<i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<img src="..." alt="...">
+						<div class="caption">
+							<h3>Title</h3>
+							<p>Price</p>
+							<p>Discription</p>
+							<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add to cart<i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row row-flex"
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<img src="..." alt="...">
+						<div class="caption">
+							<h3>Title</h3>
+							<p>Price</p>
+							<p>Discription</p>
+							<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add to cart <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<img src="..." alt="...">
+						<div class="caption">
+							<h3>Title</h3>
+							<p>Price</p>
+							<p>Discription</p>
+							<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add to cart <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<img src="..." alt="...">
+						<div class="caption">
+							<h3>Title</h3>
+							<p>Price</p>
+							<p>Discription</p>
+							<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add to cart <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<footer class="footer">
+				<div class="container">
+					<footer class="footer">
+						<div class="foot-content">
+							<div class="container">
+
+								<!--footer links/content-->
+								<div class="row">
+
+									<div class="col-md-6 visible-md-block visible-lg-block footer-brand">
+										<!--<img class="img-responsive top-logo pull-left" src="lib/template/img/icon-s-stroke.png" alt="cnm stemulus deep dive coding bootcamp" />-->
+
+										<div>
+											<a rel="license" href="</a>
+											<p><small><em>All content is licensed under <a rel="license" href="http:.</a>&nbsp;<a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">All source code released under the terms of the Apache License.</a></em></small></p>
+										</div>
+									</div>
+
+									<div class="col-xs-12 col-md-6">
+										<div class="foot-links col-md-6"></div>
+										<div class="foot-links col-md-6">
+											<h4>come along for the ride</h4>
+
+												<a href=""><i class="fa fa-twitter-square fa-3x" aria-hidden="true"> |</i></a>
+												<a href=""><i class="fa fa-facebook-square fa-3x" aria-hidden="true"> |</i></a>
+												<a href=""><i class="fa fa-github-square fa-3x" aria-hidden="true"> |</i></a>
+												<a href=""><i class="fa fa-google-plus-square fa-3x" aria-hidden="true"> </i></a>
+										</div>
+									</div>
+								</div><!--.row-->
+
+								<div class="row visible-xs-block visible-sm-block">
+									<div class="foot-bottom col-xs-12">
+										<div>Deep Dive Coding Student Server</div>
+										<div>
+											<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img alt="Creative Commons License" src="/media/img/cc-by-sa-xs.png"></a>
+											<p><small><em>All content is licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">.</a> <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">All source code released under the terms of the Apache License.</a></em></small></p>
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-				<div class="col-sm-6 col-md-4">
-					<div class="thumbnail">
-						<img src="..." alt="...">
-						<div class="caption">
-							<h3>Title</h3>
-							<p>Discription</p>
-							<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-						</div>
-					</div>
+								<div class="col-xs-12 col-md-6">
+									<h4 class="footer-ROMuLess">ROMuLess<i class="fa fa-copyright" aria-hidden="true"></i></h4>
+								</div>
+							</div><!--.container-->
+						</div><!--.foot-content-->
 				</div>
-				<div class="col-sm-6 col-md-4">
-					<div class="thumbnail">
-						<img src="..." alt="...">
-						<div class="caption">
-							<h3>Title</h3>
-							<p>Discription</p>
-							<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-						</div>
-					</div>
-				</div>
-					</div>
-		</section>
+			</footer>
 	</body>
 </html>
