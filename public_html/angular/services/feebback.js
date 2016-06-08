@@ -38,3 +38,25 @@ app.service("FeedbackService", function($http, FEEDBACK_ENDPOINT) {
 	this.fetch = function(tweetId) {
 		return($http.get(getUrlForId(tweetId)));
 	};
+
+	/**
+	 * POSTS a tweet
+	 */
+	this.create = function(tweet) {
+		return($http.post(getUrl(), tweet));
+	};
+
+	/**
+	 * PUTS a tweet
+	 */
+	this.update = function(tweetId, tweet) {
+		return($http.put(getUrlForId(tweetId), tweet));
+	};
+
+	/**
+	 * DELETES a tweet
+	 */
+	this.destroy = function(tweetId) {
+		return($http.delete(getUrlForId(tweetId)));
+	};
+});
