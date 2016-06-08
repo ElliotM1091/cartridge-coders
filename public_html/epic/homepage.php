@@ -116,8 +116,7 @@
 							<h3>Title</h3>
 							<p>Price</p>
 							<p>Discription</p>
-							<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default"
-																												  role="button">Add to cart<i
+							<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add to cart<i
 										class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
 						</div>
 					</div>
@@ -129,8 +128,7 @@
 							<h3>Title</h3>
 							<p>Price</p>
 							<p>Discription</p>
-							<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default"
-																												  role="button">Add to cart<i
+							<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add to cart<i
 										class="fa fa-shopping-cart " aria-hidden="true"></i></a></p>
 						</div>
 					</div>
@@ -142,8 +140,7 @@
 							<h3>Title</h3>
 							<p>Price</p>
 							<p>Discription</p>
-							<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default"
-																												  role="button">Add to cart<i
+							<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add to cart<i
 										class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
 						</div>
 					</div>
@@ -158,8 +155,7 @@
 							<h3>Title</h3>
 							<p>Price</p>
 							<p>Discription</p>
-							<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default"
-																												  role="button">Add to cart<i
+							<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add to cart<i
 										class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
 						</div>
 					</div>
@@ -171,8 +167,7 @@
 							<h3>Title</h3>
 							<p>Price</p>
 							<p>Discription</p>
-							<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default"
-																												  role="button">Add to cart<i
+							<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add to cart<i
 										class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
 						</div>
 					</div>
@@ -184,8 +179,7 @@
 							<h3>Title</h3>
 							<p>Price</p>
 							<p>Discription</p>
-							<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default"
-																												  role="button">Add to cart<i
+							<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add to cart<i
 										class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
 						</div>
 					</div>
@@ -200,8 +194,7 @@
 							<h3>Title</h3>
 							<p>Price</p>
 							<p>Discription</p>
-							<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default"
-																												  role="button">Add to cart <i
+							<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add to cart <i
 										class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
 						</div>
 					</div>
@@ -213,8 +206,7 @@
 							<h3>Title</h3>
 							<p>Price</p>
 							<p>Discription</p>
-							<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default"
-																												  role="button">Add to cart <i
+							<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add to cart <i
 										class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
 						</div>
 					</div>
@@ -226,8 +218,7 @@
 							<h3>Title</h3>
 							<p>Price</p>
 							<p>Discription</p>
-							<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default"
-																												  role="button">Add to cart <i
+							<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add to cart <i
 										class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
 						</div>
 					</div>
@@ -252,10 +243,10 @@
 										<div class="foot-links col-md-6"></div>
 										<div class="foot-links col-md-6">
 											<h4>come along for the ride</h4>
-											<a href=""><i class="fa fa-twitter-square fa-3x" aria-hidden="true"> |</i></a>
-											<a href=""><i class="fa fa-facebook-square fa-3x" aria-hidden="true"> |</i></a>
-											<a href=""><i class="fa fa-github-square fa-3x" aria-hidden="true"> |</i></a>
-											<a href=""><i class="fa fa-google-plus-square fa-3x" aria-hidden="true"> </i></a>
+											<a href=""><i class="fa fa-twitter-square fa-3x" aria-hidden="true">| </i></a>
+											<a href=""> <i class="fa fa-facebook-square fa-3x" aria-hidden="true"> | </i></a>
+											<a href=""> <i class="fa fa-github-square fa-3x" aria-hidden="true"> | </i></a>
+											<a href=""> <i class="fa fa-google-plus-square fa-3x" aria-hidden="true"> </i></a>
 										</div>
 									</div>
 									<div class="col-xs-12 col-md-6">
