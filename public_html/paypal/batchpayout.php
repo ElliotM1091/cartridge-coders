@@ -15,8 +15,8 @@ setXsrfCookie();
 <!-- @author Donald Deleeuw <donald.deleeuw@gmail.com> -->
 <!------------------------------------------------------->
 
-<?php
 
+<?php
 // ---------------------------------------- encrypted config files -------------------------------------
 require_once("/etc/apache2/capstone-mysql/encrypted-config.php");
 $config = readConfig("/etc/apache2/capstone-mysql/cartridge.ini");
@@ -27,19 +27,55 @@ $paypal = json_decode($config["privkeys"])->paypal;
 require_once(dirname(__DIR__) . "../../vendor/autoload.php");
 $authCode = filter_input(INPUT_GET, "code", FILTER_SANITIZE_STRING);
 
-
 //------------------------------------------------ cURL ------------------------------------------------
-// ----- @see https://developer.paypal.com/docs/api/#identity
+// ----- @see https://developer.paypal.com/docs/integration/direct/create-batch-payout/
 // ----- @see http://incarnate.github.io/curl-to-php/
 // ----- cURL - initialize session - get access token from authorization code
 $ch = curl_init();
 
-
 // ----- cURL - set options
-curl_setopt($ch, CURLOPT_URL, "https://api.sandbox.paypal.com/v1/identity/openidconnect/tokenservice");
+curl_setopt($ch, CURLOPT_URL, "https://api.sandbox.paypal.com/v1/payments/payouts/");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, "client_id=" . $paypal->clientId . "&client_secret=" . $paypal->clientSecret . "&grant_type=authorization_code&code=" . $authCode);
-curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS,                     //-----json goes here but need to figure out formatting ----
+
+'{
+    "sender_batch_header": {
+      "sender_batch_id": "batch_25",
+      "email_subject": "You have a payment"
+    },
+    "items": [
+      {
+        "recipient_type": "EMAIL",
+        "amount": {
+          "value": 0.99,
+          "currency": "USD"
+        },
+        "receiver": "shirt-supplier-one@mail.com",
+        "note": "Thank you.",
+        "sender_item_id": "item_1"
+      },
+      {
+        "recipient_type": "EMAIL",
+        "amount": {
+          "value": 0.90,
+          "currency": "USD"
+        },
+        "receiver": "shirt-supplier-two@mail.com",
+        "note": "Thank you.",
+        "sender_item_id": "item_2"
+      },
+
+
+
+
+
+
+);
+
+$headers = array();
+$headers[] = "Content-Type: application/json";
+$headers[] = "Authorization: Bearer Access-Token";
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
 // ----- cURL - get results
 $accessToken = curl_exec($ch);
@@ -51,6 +87,21 @@ if(curl_errno($ch)) {
 
 // ----- cURL - close session
 curl_close($ch);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // ------ break apart return JSON data in $accessToken
 $json = json_decode($accessToken);
