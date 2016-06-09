@@ -31,6 +31,7 @@ try {
 
 	//sanitize input
 	$id = filter_input(INPUT_GET, "id", FILTER_VALIDATE_INT);
+	$categoryName = filter_input(INPUT_GET, "categoryName", FILTER_SANITIZE_STRING);
 
 	//make sure the id is valid for methods that require it
 	if(($method === "DELETE" || $method === "PUT") && (empty($id) === true || $id < 0)) {
@@ -46,6 +47,12 @@ try {
 		//get a specific category or all categories and update reply
 		if(empty($id) === false) {
 			$category = CartridgeCoders\Category::getCategoryByCategoryId($pdo, $id);
+			if($category !== null) {
+				$reply->data = $category;
+			}
+		}//get a specific category or all categories and update reply
+		if(empty($categoryName) === false) {
+			$category = CartridgeCoders\Category::getCategoryByCategoryName($pdo, $categoryName);
 			if($category !== null) {
 				$reply->data = $category;
 			}

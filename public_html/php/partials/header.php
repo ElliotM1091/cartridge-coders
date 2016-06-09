@@ -43,10 +43,10 @@
 		<div class="col-md-12">
 			<div class="btn-group btn-group-justified " role="group" aria-label="...">
 				<div class="btn-group " role="group">
-					<button type="button" class="btn categorybar" ng-click="categoryAll()">All</button>
+					<button type="button" class="btn categorybar" ng-click="category()">All</button>
 				</div>
 				<div class="btn-group" role="group">
-					<button type="button" class="btn categorybar" ng-click="categoryAtari()">ATARI</button>
+					<button type="button" class="btn categorybar" ng-click="category(atari)">ATARI</button>
 				</div>
 				<div class="btn-group" role="group">
 					<button type="button" class="btn categorybar">NES</button>

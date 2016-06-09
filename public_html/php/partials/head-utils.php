@@ -50,11 +50,12 @@ if(session_status() !== PHP_SESSION_ACTIVE) {
 		<!--Angular app files (order: app, services, directives, controllers)-->
 		<script type="text/javascript" src="angular/romuless.js"></script>
 		<script type="text/javascript" src="angular/route-config.js"></script>
+		<script type="text/javascript" src="angular/services/product.js"></script>
 		<script type="text/javascript" src="angular/controllers/home-controller.js"></script>
-		<script type="text/javascript" src="angular/controllers/search-results-controller.js"></script>
-		<script type="text/javascript" src="angular/controllers/signin-controller.js"></script>
-		<script type="text/javascript" src="angular/controllers/category-controller.js"></script>
-		<script type="text/javascript" src="angular/controllers/cart-controller.js"></script>
+<!--		<script type="text/javascript" src="angular/controllers/search-results-controller.js"></script>-->
+<!--		<script type="text/javascript" src="angular/controllers/signin-controller.js"></script>-->
+		<script type="text/javascript" src="angular/controllers/product-controller.js"></script>
+<!--		<script type="text/javascript" src="angular/controllers/cart-controller.js"></script>-->
 
 
 	</head>
