@@ -1,8 +1,8 @@
-app.controller("HomeController", ["$location", "$scope", "ProductService", "Pusher", function($location, $scope, ProductService, Pusher) {
+app.controller("HomeController", ["$location", "$scope", "ProductService", function($location, $scope, ProductService) {
 	// $scope.collapseAddForm = true;
 	$scope.products = [];
 	// $scope.newProduct = {productId: null, attribution: "", misquote: "", submitter: ""};
-	$scope.alerts = [];
+	// $scope.alerts = [];
 
 	/**
 	 * creates a misquote and sends it to the misquote API
@@ -33,12 +33,26 @@ app.controller("HomeController", ["$location", "$scope", "ProductService", "Push
 		ProductService.all()
 			.then(function(result) {
 				if(result.status === 200) {
-					$scope.products = result.data;
+					$scope.products = result.data.data;
+					console.log($scope.products);
 				} else {
 					$scope.alerts[0] = {type: "danger", msg: result.message};
 				}
 			});
 	};
+	// $scope.getImages = function() {
+	// 	ImageService.all()
+	// 		.then(function(result) {
+	// 			if(result.status === 200) {
+	// 				$scope.images = result.data.data;
+	// 				console.log($scope.products);
+	// 			} else {
+	// 				$scope.alerts[0] = {type: "danger", msg: result.message};
+	// 			}
+	// 		})
+	// }
+	// // after this need to pull the actual image from the server that matches the name
+	// $i
 
 	/**
 	 * reroute the page to the specified misquote
