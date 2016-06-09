@@ -26,51 +26,31 @@ app.service("MessageService", function($http, MESSAGE_ENDPOINT) {
 	}
 
 	/**
-	 * GETS all feedback
+	 * GETS a message by ID
 	 */
-	this.all = function() {
-		return($http.get(getUrl()));
+	this.fetch = function(messageId) {
+		return($http.get(getUrlForId(messageId)));
 	};
 
 	/**
-	 * GETS a Feedback by ID
-	 */
-	this.fetch = function(feedbackId) {
-		return($http.get(getUrlForId(feedbackId)));
-	};
-
-	/**
-	 * GETS feedback by feedback party id
+	 * GETS feedback by message party id
 	 **/
 	this.fetchByPartyId = function(partyId) {
 		return($http.get(getUrl() + "?partyId=" + partyId));
 	};
 
 	/**
-	 * GET feedback by feedback Sender id
-	 **/
-	this.fetchByFeedbackSenderId = function(feedbackSenderId) {
-		return($http.get(getUrl() + "?feedbackSenderId=" + feedbackSenderId));
-	};
-
-	/**
-	 * GET feedback by feedback recipient id
-	 **/
-	this.fetchByFeedbackRecipientId = function(feedbackRecipientId) {
-		returne($http.get(getUrl() + "?feedbackRecipientId=" + feedbackRecipientId));
-	};
-	/**
-	 * POSTS feedback
+	 * POSTS message
 	 */
-	this.create = function(feedback) {
-		return($http.post(getUrl(), feedback));
+	this.create = function(message) {
+		return($http.post(getUrl(), message));
 	};
 
 	/**
 	 * PUTS a tweet
 	 */
-	this.update = function(feedbackId, feedback) {
-		return($http.put(getUrlForId(feedbackId), feedback));
+	this.update = function(messageId, message) {
+		return($http.put(getUrlForId(messgaeId), message));
 	};
 
 	/**
