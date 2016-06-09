@@ -1,7 +1,7 @@
 /**
  * Defines a constant which holds the base url of the API
  */
-app.constant("FEEDBACK_ENDPOINT", "api/feedback/");
+app.constant("FEEDBACK_ENDPOINT", "php/api/feedback/");
 
 /**
  * Initializes our feedback service
@@ -12,51 +12,71 @@ app.constant("FEEDBACK_ENDPOINT", "api/feedback/");
 app.service("FeedbackService", function($http, FEEDBACK_ENDPOINT) {
 
 	/**
-	 * Returns the tweet endpoint for use in other methods
+	 * Returns the feedback endpoint for use in other methods
 	 */
 	function getUrl() {
 		return(FEEDBACK_ENDPOINT);
 	}
 
 	/**
-	 * Builds a URL for getting a tweet by ID (example: "api/tweet/4")
+	 * Builds a URL for getting a Feedback by ID
 	 */
-	function getUrlForId(tweetId) {
-		return(getUrl() + tweetId);
+	function getUrlForId(feedbackId) {
+		return(getUrl() + feedbackId);
 	}
 
 	/**
-	 * GETS all tweets
+	 * GETS all feedback
 	 */
 	this.all = function() {
 		return($http.get(getUrl()));
 	};
 
 	/**
-	 * GETS a tweet by ID
+	 * GETS a Feedback by ID
 	 */
-	this.fetch = function(tweetId) {
-		return($http.get(getUrlForId(tweetId)));
+	this.fetch = function(feedbackId) {
+		return($http.get(getUrlForId(feedbackId)));
 	};
 
 	/**
-	 * POSTS a tweet
-	 */
-	this.create = function(tweet) {
-		return($http.post(getUrl(), tweet));
+	 * GETS feedback by feedback party id
+	 **/
+	this.fetchByPartyId = function(partyId) {
+		return($http.get(getUrl() + "?partyId=" + partyId));
 	};
 
 	/**
-	 * PUTS a tweet
-	 */
-	this.update = function(tweetId, tweet) {
-		return($http.put(getUrlForId(tweetId), tweet));
+	 * GET feedback by feedback Sender id
+	 **/
+	this.fetchByFeedbackSenderId = function(feedbackSenderId) {
+		return($http.get(getUrl() + "?feedbackSenderId=" + feedbackSenderId));
 	};
 
 	/**
-	 * DELETES a tweet
+	 * GET feedback by feedback recipient id
+	 **/
+	this.fetchByFeedbackRecipientId = function(feedbackRecipientId) {
+		returne($http.get(getUrl() + "?feedbackRecipientId=" + feedbackRecipientId));
+	};
+	/**
+	 * POSTS feedback
 	 */
-	this.destroy = function(tweetId) {
-		return($http.delete(getUrlForId(tweetId)));
+	this.create = function(feedback) {
+		return($http.post(getUrl(), feedback));
+	};
+
+	/**
+	 * PUTS a feedback
+	 */
+	this.update = function(feedbackId, feedback) {
+		return($http.put(getUrlForId(feedbackId), feedback));
+	};
+
+	/**
+	 * DELETES a feedback
+	 */
+	this.destroy = function(feedbackId) {
+		return($http.delete(getUrlForId(feedbackId)));
 	};
 });

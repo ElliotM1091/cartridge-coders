@@ -5,12 +5,14 @@
 define("DEBUG", 1);
 // Set to 0 once you're ready to go live
 define("USE_SANDBOX", 1);
-define("LOG_FILE", "./ipn.log");
+define("LOG_FILE", "./tmp/ipn.log");
 // Read POST data
 // reading posted data directly from $_POST causes serialization
 // issues with array data in POST. Reading raw POST data from input stream instead.
 $raw_post_data = file_get_contents('php://input');
+var_dump($raw_post_data);
 $raw_post_array = explode('&', $raw_post_data);
+var_dump($raw_post_array);
 $myPost = array();
 foreach ($raw_post_array as $keyval) {
 	$keyval = explode ('=', $keyval);
