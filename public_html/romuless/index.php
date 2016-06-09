@@ -17,3 +17,16 @@ app.service("FeedbackService", function($http, FEEDBACK_ENDPOINT) {
 function getUrl() {
 return(FEEDBACK_ENDPOINT);
 }
+/**
+* Builds a URL for getting a Feedback by ID
+*/
+function getUrlForId(feedbackId) {
+return(getUrl() + feedbackId);
+}
+
+/**
+* GETS all feedback
+*/
+this.all = function() {
+return($http.get(getUrl()));
+};
