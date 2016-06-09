@@ -47,16 +47,9 @@ app.service("MessageService", function($http, MESSAGE_ENDPOINT) {
 	};
 
 	/**
-	 * PUTS a tweet
+	 * PUTS a message
 	 */
 	this.update = function(messageId, message) {
 		return($http.put(getUrlForId(messgaeId), message));
-	};
-
-	/**
-	 * DELETES a feedback
-	 */
-	this.destroy = function(feedbackId) {
-		return($http.delete(getUrlForId(feedbackId)));
 	};
 });
