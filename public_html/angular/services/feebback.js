@@ -42,8 +42,8 @@ app.service("FeedbackService", function($http, FEEDBACK_ENDPOINT) {
 	/**
 	 * GETS feedback by feedback party id
 	 **/
-	this.fetchByPartyId = function(PartyId) {
-		return($http.get(getUrl() + "?partyId=" + PartyId));
+	this.fetchByPartyId = function(partyId) {
+		return($http.get(getUrl() + "?partyId=" + partyId));
 	};
 
 	/**

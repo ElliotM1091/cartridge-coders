@@ -19,31 +19,31 @@ app.service("FeedbackService", function($http, FEEDBACK_ENDPOINT) {
 	}
 
 	/**
-	 * Builds a URL for getting a Feedback by ID
+	 * Builds a URL for getting a category  by ID
 	 */
 	function getUrlForId(categoryId) {
-		return(getUrl() + feedbackId);
+		return(getUrl() + categoryId);
 	}
 
 	/**
-	 * GETS all feedback
+	 * GETS all category
 	 */
 	this.all = function() {
 		return($http.get(getUrl()));
 	};
 
 	/**
-	 * GETS a Feedback by ID
+	 * GETS a category by ID
 	 */
-	this.fetch = function(feedbackId) {
-		return($http.get(getUrlForId(feedbackId)));
+	this.fetch = function(categoryId) {
+		return($http.get(getUrlForId(categoryId)));
 	};
 
 	/**
 	 * GETS feedback by feedback party id
 	 **/
-	this.fetchByPartyId = function(PartyId) {
-		return($http.get(getUrl() + "?partyId=" + PartyId));
+	this.fetchByCategoryName = function(categoryName) {
+		return($http.get(getUrl() + "?categoryName=" + categoryName));
 	};
 
 	/**
