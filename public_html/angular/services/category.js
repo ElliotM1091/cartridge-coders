@@ -61,7 +61,7 @@ app.service("FeedbackService", function($http, CATEGORY_ENDPOINT) {
 	};
 
 	/**
-	 * DELETES a feedback
+	 * DELETES a category
 	 */
 	this.destroy = function(categoryId) {
 		return($http.delete(getUrlForId(categoryId)));

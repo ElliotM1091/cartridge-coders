@@ -67,7 +67,7 @@ app.service("FeedbackService", function($http, FEEDBACK_ENDPOINT) {
 	};
 
 	/**
-	 * PUTS a tweet
+	 * PUTS a feedback
 	 */
 	this.update = function(feedbackId, feedback) {
 		return($http.put(getUrlForId(feedbackId), feedback));
