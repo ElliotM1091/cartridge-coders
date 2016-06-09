@@ -40,43 +40,30 @@ app.service("FeedbackService", function($http, FEEDBACK_ENDPOINT) {
 	};
 
 	/**
-	 * GETS feedback by feedback party id
+	 * GETS category by category name
 	 **/
 	this.fetchByCategoryName = function(categoryName) {
 		return($http.get(getUrl() + "?categoryName=" + categoryName));
 	};
 
 	/**
-	 * GET feedback by feedback Sender id
-	 **/
-	this.fetchByFeedbackSenderId = function(feedbackSenderId) {
-		return($http.get(getUrl() + "?feedbackSenderId=" + feedbackSenderId));
+	 * POSTS category
+	 */
+	this.create = function(category) {
+		return($http.post(getUrl(), category));
 	};
 
 	/**
-	 * GET feedback by feedback recipient id
-	 **/
-	this.fetchByFeedbackRecipientId = function(feedbackRecipientId) {
-		returne($http.get(getUrl() + "?feedbackRecipientId=" + feedbackRecipientId));
-	};
-	/**
-	 * POSTS feedback
+	 * PUTS a category
 	 */
-	this.create = function(feedback) {
-		return($http.post(getUrl(), feedback));
-	};
-
-	/**
-	 * PUTS a tweet
-	 */
-	this.update = function(feedbackId, feedback) {
-		return($http.put(getUrlForId(feedbackId), feedback));
+	this.update = function(categoryId, category) {
+		return($http.put(getUrlForId(categoryId), category));
 	};
 
 	/**
 	 * DELETES a feedback
 	 */
-	this.destroy = function(feedbackId) {
-		return($http.delete(getUrlForId(feedbackId)));
+	this.destroy = function(categoryId) {
+		return($http.delete(getUrlForId(categoryId)));
 	};
 });
