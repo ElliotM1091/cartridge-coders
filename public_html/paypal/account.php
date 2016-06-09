@@ -147,6 +147,64 @@ if (is_object($accounts) && (count(get_object_vars($accounts)) < 1)){
 ?>
 
 
+<!-- =============================== TEMP BATCHPAYOUT TESTING WITH $accessTokenExtractToken =======================-->
+
+<?php
+
+$ch = curl_init();
+
+$data = array(
+"sender_batch_id" => "batch_25", "email_subject" => "You have a payment","items" =>array("recipient_type" => "EMAIL", "amount" =>array("value" => "9.99", "curency" => "USD"),"receiver" => "cartridgecoders-buyer@gmail.com","note" => "Thank you.","sender_item_id" => "item_1"),array("value" => "1.99", "curency" => "USD"),"receiver" => "cartridgecoders-facilitator@gmail.com","note" => "Admin Fee.","sender_item_id" => "item_1");
+
+
+
+
+
+$data_string = json_encode($data);
+
+curl_setopt($ch, CURLOPT_URL, "https://api.sandbox.paypal.com/v1/payments/payouts/");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+'Content-Type: application/json',
+'Content-Length: ' . strlen($data_string))
+);
+
+$headers = array();
+//$headers[] = "Content-Type: application/json";
+//$headers[] = "Authorization: Bearer Access-Token";
+$headers[] = "Authorization: Bearer " . $accessTokenExtractToken;
+$headers[] = "Content-Type: application/json";
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+
+// ----- cURL - get results
+$result = curl_exec($ch);
+
+// ----- cURL - error checking
+if(curl_errno($ch)) {
+echo 'Error:' . curl_error($ch);
+}
+
+// ----- cURL - close session
+curl_close($ch);
+
+
+
+var_dump($data_string);
+var_dump($headers);
+var_dump($result);
+
+
+?>
+
+<!-- =============================== TEMP BATCHPAYOUT TESTING WITH $accessTokenExtractToken =======================-->
+
+
+
+
+
 <!--	----------------------------------------- Leave PHP/ Enter HTML -------------------------------------------->
 
 
