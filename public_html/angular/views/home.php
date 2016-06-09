@@ -14,18 +14,19 @@
 <!--website no encryption-->
 		<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
 			<input type="hidden" name="cmd" value="_xclick">
+			<input type="hidden" name="callback_url" value="https://bootcamp-coders.cnm.edu/~ddeleeuw/cartridge-coders/public_html/paypal/paypal_ipn.php">
 			<input type="hidden" name="business" value="RDVVD8PSYE5AG">
 			<input type="hidden" name="lc" value="US">
-			<input type="hidden" name="item_name" value="ITEM NAME">
-			<input type="hidden" name="item_number" value="ITEM_ID">
-			<input type="hidden" name="amount" value="9.99">
-			<input type="hidden" name="currency_code" value="USD">
+			<input type="hidden" name="item_name" value="Box Fan">
+			<input type="hidden" name="item_number" value="2HOT">
+			<input type="hidden" name="amount" value="200.00">
+			<input type="hidden" name="currency_code" value="MXN">
 			<input type="hidden" name="button_subtype" value="services">
 			<input type="hidden" name="no_note" value="0">
 			<input type="hidden" name="cn" value="Add special instructions to the seller:">
 			<input type="hidden" name="no_shipping" value="2">
-			<input type="hidden" name="rm" value="1">
 			<input type="hidden" name="return" value="https://bootcamp-coders.cnm.edu/~ddeleeuw/cartridge-coders/public_html/index.php">
+			<input type="hidden" name="rm" value="2">
 			<input type="hidden" name="cancel_return" value="https://bootcamp-coders.cnm.edu/~ddeleeuw/cartridge-coders/public_html/index.php">
 			<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_SM.gif:NonHosted">
 			<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynow_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
