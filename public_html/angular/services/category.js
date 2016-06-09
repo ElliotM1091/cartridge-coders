@@ -9,10 +9,10 @@ app.constant("CATEGORY_ENDPOINT", "php/api/category/");
  * Notice we inject the $http service, we use this to make REST calls
  * We also inject our endpoint so that it's usable inside the service
  */
-app.service("FeedbackService", function($http, FEEDBACK_ENDPOINT) {
+app.service("FeedbackService", function($http, CATEGORY_ENDPOINT) {
 
 	/**
-	 * Returns the tweet endpoint for use in other methods
+	 * Returns the category endpoint for use in other methods
 	 */
 	function getUrl() {
 		return(CATEGORY_ENDPOINT);

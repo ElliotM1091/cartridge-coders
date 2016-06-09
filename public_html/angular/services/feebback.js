@@ -12,7 +12,7 @@ app.constant("FEEDBACK_ENDPOINT", "php/api/feedback/");
 app.service("FeedbackService", function($http, FEEDBACK_ENDPOINT) {
 
 	/**
-	 * Returns the tweet endpoint for use in other methods
+	 * Returns the feedback endpoint for use in other methods
 	 */
 	function getUrl() {
 		return(FEEDBACK_ENDPOINT);
