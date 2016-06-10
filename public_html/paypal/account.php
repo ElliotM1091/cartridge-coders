@@ -118,7 +118,7 @@ if (is_object($accounts) && (count(get_object_vars($accounts)) < 1)){
 			<p></p>
 
 
-			GET ALL PRODUCTS BY PRODUCT-ACCOUNT-ID
+			
 
 
 

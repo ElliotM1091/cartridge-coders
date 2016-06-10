@@ -10,8 +10,8 @@ footer
 -donate button
 
 account page ++ display user product by productaccountId
-
-form to create a new product
+GET ALL PRODUCTS BY PRODUCT-ACCOUNT-ID
+Add a new product -> form to create a new product
 
 form to send a message
 
