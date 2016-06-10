@@ -1,6 +1,6 @@
 <!DOCTYPE html> <!--this is the doctype declaration-->
-<html lang="en" xmlns="http://www.w3.org/1999/html"><!--this is to set this page to english-->
-	<head>  <!--this is the head tag to start the doc out-->
+<html lang="en" ng-app><!--this is to set this page to english-->
+	<head>
 
 		<meta charset="utf-8">
 		<!--this helps out IE-->
@@ -30,6 +30,11 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
 				  integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
 				  crossorigin="anonymous"></script>
+
+		<! -- angular min -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+		<! -- app.js file -->
+		<script type="text/javascript" src="app.js"></script>
 		<title>ROMuLess</title>
 	</head>
 	<body class="sfooter">
