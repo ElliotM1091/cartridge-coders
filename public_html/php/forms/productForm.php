@@ -41,7 +41,7 @@
 			<div class="input-group-addon">
 				<i class="fa fa-pencil" aria-hidden="true"></i>
 			</div>
-			<input type="text" class="form-control" id="name" title="title" placeholder="Title">
+			<input type="text" class="form-control" id="title" title="title" placeholder="Title">
 		</div>
 	</div>
 	<div class="form-group">

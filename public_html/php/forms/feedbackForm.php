@@ -19,7 +19,7 @@
 				rel="stylesheet"/>
 
 		<!--customer CSS-->
-		<link rel="stylesheet" href="./css/styles.css" type="text/css">
+		<link rel="stylesheet" href="../../epic/style.css" type="text/css">
 		<!-- favicon -->
 		<link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon"/>
 
@@ -40,44 +40,46 @@
 					<div class="input-group-addon">
 						<i class="fa fa-pencil" aria-hidden="true"></i>
 					</div>
-					<input type="number" class="form-control" id="" title="senderId" placeholder="Title">
+					<input type="number" class="form-control" id="senderid" title="senderId" placeholder="Numbers only">
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="recipientId">Recipient Id:</label>
-				<p class="fee">*There is a administration fee of 1.99 for all items sold</p>
+<!--				<p class="fee"></p>-->
 				<div class="input-group">
 					<div class="input-group-addon">
 						<i class="fa fa-usd" aria-hidden="true"></i>
 					</div>
-					<input type="number" class="form-control" id="recipientId" name="recipientId" placeholder="">
+					<input type="number" class="form-control" id="recipientId" name="recipientId" placeholder="Numbers only">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="product">Product</label>
+				<div class="input-group">
+					<div class="input-group-addon">
+						<i class="fa fa-usd" aria-hidden="true"></i>
+					</div>
+					<input type="text" class="form-control" id="product" name="product" placeholder="Product Id">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="rating">Rating</label>
+				<div class="input-group">
+					<div class="input-group-addon">
+						<i class="fa fa-file-image-o" aria-hidden="true"></i>
+					</div>
+					<div class="rating">
+						<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+					</div>
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="content">Feedback</label>
 				<div class="input-group">
 					<div class="input-group-addon">
-						<i class="fa fa-usd" aria-hidden="true"></i>
-					</div>
-					<input type="text" class="form-control" id="shipping" name="shipping" placeholder="$0.00">
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="Image">Image</label>
-				<div class="input-group">
-					<div class="input-group-addon">
-						<i class="fa fa-file-image-o" aria-hidden="true"></i>
-					</div>
-					<input  type="file" class="form-control" id="shipping" name="image" placeholder="jpg/png">
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="description">Description</label>
-				<div class="input-group">
-					<div class="input-group-addon">
 						<i class="fa fa-pencil" aria-hidden="true"></i>
 					</div>
-					<textarea class="form-control" rows="5" id="description" name="description" placeholder="Description(255 Characters total)"></textarea>
+					<textarea class="form-control" rows="5" id="content" name="content" placeholder="Feedback(255 characters total"></textarea>
 				</div>
 			</div>
 			<button class="btn btn-success" type="submit"><i class="fa fa-paper-plane"></i> Send</button>
