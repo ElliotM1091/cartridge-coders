@@ -45,7 +45,7 @@
 		</div>
 	</div>
 	<div class="form-group">
-		<label> for="price">Price</label>
+		<label for="price">Price</label>
 		<p class="fee">*There is a administration fee of 1.99 for all items sold</p>
 		<div class="input-group">
 			<div class="input-group-addon">
