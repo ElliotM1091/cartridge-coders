@@ -16,6 +16,10 @@ app.service("ProductService", function($http, MISQUOTE_ENDPOINT) {
 		return($http.get(getUrlForId(productId)));
 	};
 
+	this.fetchByProductAccountId = function(productAccountId) {
+		return($http.get(getUrl() + "?productAccountId=" + productAccountId));
+	};
+
 	this.create = function(product) {
 		return($http.post(getUrl(), product));
 	};
