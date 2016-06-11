@@ -19,7 +19,7 @@
 				rel="stylesheet"/>
 
 		<!--customer CSS-->
-		<link rel="stylesheet" href="../../epic/style.css" type="text/css">
+		<link rel="stylesheet" href="../../epic/style2.css" type="text/css">
 		<!-- favicon -->
 		<link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon"/>
 
