@@ -10,6 +10,7 @@ app.controller("AccountProductController", ["$location", "$scope", "ProductServi
 	$scope.alerts = [];
 
 
+	
 	/**
 	 * creates a misquote and sends it to the misquote API
 	 *
