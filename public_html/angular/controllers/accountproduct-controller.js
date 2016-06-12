@@ -4,13 +4,13 @@
 app.controller("AccountProductController", ["$location", "$scope", "ProductService", "Pusher", function($location, $scope, ProductService, Pusher) {
 	$scope.collapseAddForm = true;
 	$scope.products = [];
-	$scope.newProduct = {productId: null, attribution: "", misquote: "", submitter: ""};
+	$scope.newProduct = {productId: null, productAccountId: "", productImageId: "", productAdminFee: "", productDescription: "", productPrice: "", productShipping: "", productSold: "", productTitle: ""};
 	$scope.alerts = [];
 
 	/**
-	 * fulfills the promise from retrieving the misquotes from misquote API
+	 * fulfills the promise from retrieving the Products
 	 **/
-	$scope.getMisquotes = function() {
+	$scope.getProductsById = function() {
 		ProductService.fetchByProductAccountId(productAccountId)
 			.then(function(result) {
 				if(result.data.status === 200) {
@@ -21,7 +21,9 @@ app.controller("AccountProductController", ["$location", "$scope", "ProductServi
 			});
 	};
 
+	console.log(data); // ---------------------------------- delete me
 
+	
 	// load the array on first view
 	if($scope.products.length === 0) {
 		$scope.products = $scope.getProducts();
