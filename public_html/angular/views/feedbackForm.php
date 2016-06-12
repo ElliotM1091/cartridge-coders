@@ -66,7 +66,7 @@
 				<label for="rating">Rating</label>
 				<div class="input-group">
 					<div class="input-group-addon">
-						<i class="fa fa-file-image-o" aria-hidden="true"></i>
+						
 					</div>
 					<div class="rating">
 						<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
