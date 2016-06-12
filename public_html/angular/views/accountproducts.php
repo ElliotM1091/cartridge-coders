@@ -14,7 +14,7 @@
 		<ul>
 			<li class="productlist" ng-repeat="items in productlist">
 				<div class=""info">
-				<p>{{item.productAccountId</p>
+				<p>{{item.productAccountId}}</p>
 				<p>{{item.productTitle}}</p>
 				<p>{{item.productPrice}}</p>
 	</div>
