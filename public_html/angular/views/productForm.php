@@ -34,6 +34,7 @@
 
 
 <body>
+		<h1>List Product</h1>
 <form class="form-horizontal well" action="email.php">
 	<div class="form-group">
 		<label for="Title">Title</label>
