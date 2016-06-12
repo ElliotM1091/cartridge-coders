@@ -1,5 +1,5 @@
-app.constant("PRODUCT_ENDPOINT", "apis/product/");
-app.service("ProductService", function($http, MISQUOTE_ENDPOINT) {
+app.constant("PRODUCT_ENDPOINT", "php/apis/product/");
+app.service("ProductService", function($http, PRODUCT_ENDPOINT) {
 	function getUrl() {
 		return(PRODUCT_ENDPOINT);
 	}
@@ -14,10 +14,6 @@ app.service("ProductService", function($http, MISQUOTE_ENDPOINT) {
 
 	this.fetch = function(productId) {
 		return($http.get(getUrlForId(productId)));
-	};
-
-	this.fetchByProductAccountId = function(productAccountId) {
-		return($http.get(getUrl() + "?productAccountId=" + productAccountId));
 	};
 
 	this.create = function(product) {

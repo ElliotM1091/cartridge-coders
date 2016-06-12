@@ -49,65 +49,71 @@ try {
 			if($image !== null) {
 				$reply->data = $image;
 			}
-		} else {
-			$images = CartridgeCoders\Image::getAllImageFileNames($pdo);
-			if($images !== null) {
-				$reply->data = $images;
+		}
+		if(empty($productImageId) === false) {
+			$image = CartridgeCoders\Image::getImageFileNameByProductImageId($pdo, $productImageId);
+			if($image !== null) {
+				$reply->data = $image;
+			} else {
+				$images = CartridgeCoders\Image::getAllImageFileNames($pdo);
+				if($images !== null) {
+					$reply->data = $images;
+				}
 			}
-		}
-	} else if($method === "PUT" || $method === "POST") {
+		} else if($method === "PUT" || $method === "POST") {
 
-		verifyXsrf();
-		$requestContent = file_get_contents("php://input");
-		$requestObject = json_decode($requestContent);
+			verifyXsrf();
+			$requestContent = file_get_contents("php://input");
+			$requestObject = json_decode($requestContent);
 
-		//make sure image content is available
-		if(empty($requestObject->imageFileName) === true) {
-			throw(new \InvalidArgumentException ("no content for image.", 405));
-		}
+			//make sure image content is available
+			if(empty($requestObject->imageFileName) === true) {
+				throw(new \InvalidArgumentException ("no content for image.", 405));
+			}
 
-		//perform the actual put or post
-		if($method === "PUT") {
+			//perform the actual put or post
+			if($method === "PUT") {
 
-			// retrieve the image to update
+				// retrieve the image to update
+				$image = CartridgeCoders\Image::getImageFileNameByImageId($pdo, $id);
+				if($image === null) {
+					throw(new RuntimeException("Image Does not exist", 404));
+				}
+
+				// put the new image file name into the image and update
+				$image->setImageFileName($requestObject->imageFileName);
+				$image->update($pdo);
+
+				//update reply
+				$reply->message = "Image updated ok";
+
+			} else if($method === "POST") {
+
+				// create new Image and insert into the database
+				$image = new CartridgeCoders\Image(null, $requestObject->imageFileName, $requestObject->imageType);
+				$image->insert($pdo);
+
+				// update reply
+				$reply->message = "Image created ok";
+			}
+		} else if($method === "DELETE") {
+			verifyXsrf();
+
+			// retrieve the Image to be deleted
 			$image = CartridgeCoders\Image::getImageFileNameByImageId($pdo, $id);
 			if($image === null) {
-				throw(new RuntimeException("Image Does not exist", 404));
-			}
-
-			// put the new image file name into the image and update
-			$image->setImageFileName($requestObject->imageFileName);
-			$image->update($pdo);
-
-			//update reply
-			$reply->message = "Image updated ok";
-
-		} else if($method === "POST") {
-
-			// create new Image and insert into the database
-			$image = new CartridgeCoders\Image(null, $requestObject->imageFileName, $requestObject->imageType);
-			$image->insert($pdo);
+				throw(new RuntimeException("Image does not exist", 404));
+			}//
+// I should delete this delete?
+			// delete image
+			$image->delete($pdo);
 
 			// update reply
-			$reply->message = "Image created ok";
+			$reply->message = "Image deleted OK";
+		} else {
+			throw (new InvalidArgumentException("Invalid HTTP method request"));
 		}
-	} //else if($method === "DELETE") {
-	//verifyXsrf();
-
-	// retrieve the Image to be deleted
-	//$image = CartridgeCoders\Image::getImageFileNameByImageId($pdo, $id);
-	//if($image === null) {
-	//	throw(new RuntimeException("Image does not exist", 404));
-	//}//
-// I should delete this delete?
-	// delete image
-//		$image->delete($pdo);
-
-	// update reply
-//		$reply->message = "Image deleted OK";
-//	} else {
-//		throw (new InvalidArgumentException("Invalid HTTP method request"));
-	//}
+	}
 
 	// update reply with exception information
 } catch(Exception $exception) {

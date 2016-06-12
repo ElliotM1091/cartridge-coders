@@ -1,6 +1,9 @@
-app.controller("HomeController", ["$location", "$scope", "ProductService", function($location, $scope, ProductService) {
+app.controller("HomeController", ["$location", "$scope", "ProductImageService", "ImageService", function($location, $scope, ProductImageService, ImageService) {
 	// $scope.collapseAddForm = true;
 	$scope.products = [];
+	$scope.images = {};
+	// var i, len, keys;
+
 	// $scope.newProduct = {productId: null, attribution: "", misquote: "", submitter: ""};
 	// $scope.alerts = [];
 
@@ -30,27 +33,96 @@ app.controller("HomeController", ["$location", "$scope", "ProductService", funct
 	 * fulfills the promise from retrieving the misquotes from misquote API
 	 **/
 	$scope.getProducts = function() {
-		ProductService.all()
+		ProductImageService.all()
 			.then(function(result) {
 				if(result.status === 200) {
-					$scope.products = result.data.data;
-					console.log($scope.products);
-				} else {
-					$scope.alerts[0] = {type: "danger", msg: result.message};
-				}
-			});
+					if(result.data !== undefined) {
+						$scope.products = result.data.data;
+						// console.log($scope.products);
+						// var keys = Object.keys($scope.products);
+						// var len = keys.length;
+						// console.log(len);
+
+						// for (var i = 0; i < len; i++) {
+						// 	var key = keys[i];
+						// 	console.log(i);
+						// 	console.log("testing");
+						// 	ImageService.fetchByProductImageId($scope.products[i]["productImageId"])
+						// 		.then(function(result, key) {
+						// 			if(result.status === 200) {
+						// 				$scope.images[key] = result.data.data;
+						// 				console.log(key);
+						// 				console.log("testing2");
+						// 				console.log($scope.images);
+						// 			} else {
+						// 				$scope.alerts[0] = {type: "danger", msg: result.message};
+						// 			}
+						// 		});
+						//
+						// }
+					}  else {
+						$scope.alerts[0] = {type: "danger", msg: result.data.message};
+					}
+				}});
 	};
-	// $scope.getImages = function() {
-	// 	ImageService.all()
+	if($scope.products.length === 0) {
+		$scope.products = $scope.getProducts();
+	}
+	// ImageService.fetchByProductImageId($scope.products[0]["productImageId"])
+	// 	.then(function(result) {
+	// 		if(result.status === 200) {
+	// 			if(result.data !== undefined) {
+	// 				$scope.image = result.data.data;
+	// 				console.log($scope.image);
+	// 			} else {
+	// 				$scope.alerts[0] = {type: "danger", msg: result.data.message};
+	// 			}
+	// 		}});
+
+
+	// console.log($scope.products[0]["productImageId"]);
+	// console.log($scope.products[1]["productImageId"]);
+	// console.log($scope.products[2]["productImageId"]);
+	// console.log($scope.products[3]["productImageId"]);
+	// console.log($scope.products[4]["productImageId"]);
+
+
+	// fLen = $scope.products.length;
+	// console.log(fLen);
+	// for(i = 0; i < fLen; i++) {
+	// 	ImageService.fetchByProductImageId($scope.products[i]["productImageId"])
+	//
+	// .then(function(result) {
+	// if(result.status === 200) {
+	// 	$scope.image = result.data.data;
+	// 	console.log(i);
+	// 	console.log($scope.image);
+	// } else {
+	// 	$scope.alerts[0] = {type: "danger", msg: result.message};
+	// }
+	// });
+
+	// });
+
+	// })};
+	// / ------ break apart return JSON data in $accessToken
+	//
+	// $json = json_decode($accessToken);
+	// $accessTokenExtractToken = ($json->access_token);
+
+
+	// $scope.getImageByProductImageId = function() {
+	// 	ImageService.fetchByProductImageId($scope.products[0]["productImageId"])
 	// 		.then(function(result) {
 	// 			if(result.status === 200) {
-	// 				$scope.images = result.data.data;
-	// 				console.log($scope.products);
+	// 				$scope.image = result.data.data;
+	// 				console.log($scope.image);
 	// 			} else {
 	// 				$scope.alerts[0] = {type: "danger", msg: result.message};
 	// 			}
-	// 		})
-	// }
+	// 		});
+	// };
+
 	// // after this need to pull the actual image from the server that matches the name
 	// $i
 
@@ -59,9 +131,9 @@ app.controller("HomeController", ["$location", "$scope", "ProductService", funct
 	 *
 	 * @param misquoteId id of the misquote to load
 	 **/
-	$scope.loadProduct = function(productId) {
-		$location.path("product/" + productId);
-	};
+	// $scope.loadProduct = function(productId) {
+	// 	$location.path("product/" + productId);
+	// };
 
 	// subscribe to the delete channel; this will delete from the misquotes array on demand
 	// Pusher.subscribe("misquote", "delete", function(misquote) {
@@ -89,12 +161,13 @@ app.controller("HomeController", ["$location", "$scope", "ProductService", funct
 	// });
 
 	// when the window is closed/reloaded, gracefully close the channel
-	$scope.$on("$destroy", function () {
-		Pusher.unsubscribe("product");
-	});
+	// $scope.$on("$destroy", function () {
+	// 	Pusher.unsubscribe("product");
+	// });
 
 	// load the array on first view
-	if($scope.products.length === 0) {
-		$scope.products = $scope.getProducts();
-	}
+
+	// if($scope.image.length === 0) {
+	// 	$scope.image = $scope.getImageByProductImageId();
+	// }
 }]);
