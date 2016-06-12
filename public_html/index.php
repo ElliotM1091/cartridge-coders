@@ -6,7 +6,7 @@ require_once("php/partials/head-utils.php");?>
 	<div class="sfooter">
 		
 		<!-- header now-->
-		<?php require_once("epic/header.php") ?>
+		<?php require_once("php/partials/header.php") ?>
 
 		<!-- contents -->
 		<section id="feature" class="p-y-4">
