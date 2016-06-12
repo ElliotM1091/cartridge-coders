@@ -6,7 +6,7 @@
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
-				<a class="navbar-brand" href="#">.:ROMuLess:.</a>
+				<a class="navbar-brand" href="#">ROMuLess</a>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<form class="navbar-form navbar-left" role="search">
