@@ -24,7 +24,7 @@
 		<link type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet"/>
 
 		<!--custom CSS-->
-		<link rel="stylesheet" href="../css/style2.css" type="text/css" media="">
+		<link rel="stylesheet" href="css/style2.css" type="text/css" media="">
 
 		<!-- jQuery (needed for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
