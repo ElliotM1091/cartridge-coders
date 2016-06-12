@@ -1,136 +1,22 @@
-<?php
-// inserting the head
-require_once("partials/head-utils.php");?>
+<!-- insert <head> tag -->
+<?php require_once("php/partials/head-utils.php"); ?>
 
-<body class="sfooter">
-	<div class="sfooter">
-		
-		<!-- header now-->
-		<?php require_once("../epic/header.php") ?>
+<!--<body class=""sfooter" ng-controller="homeController">-->
+<body class=""sfooter" ng-controller="AccountProductController">
+<div class=""sfooter-content">
 
-		<!-- contents -->
-		<section id="feature" class="p-y-4">
-			<div class="container">
-				<div class="row row-flex"
-			</div>
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<img src="..." alt="...">
-					<div class="caption">
-						<h3>Title</h3>
-						<p>Price</p>
-						<p>Discription</p>
-						<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add to cart<i
-									class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<img src="..." alt="...">
-					<div class="caption">
-						<h3>Title</h3>
-						<p>Price</p>
-						<p>Discription</p>
-						<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add to cart<i
-									class="fa fa-shopping-cart " aria-hidden="true"></i></a></p>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<img src="..." alt="...">
-					<div class="caption">
-						<h3>Title</h3>
-						<p>Price</p>
-						<p>Discription</p>
-						<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add to cart<i
-									class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
-					</div>
-				</div>
-			</div>
-			<div class="container">
-				<div class="row row-flex"
-			</div>
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<img src="..." alt="...">
-					<div class="caption">
-						<h3>Title</h3>
-						<p>Price</p>
-						<p>Discription</p>
-						<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add to cart<i
-									class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<img src="..." alt="...">
-					<div class="caption">
-						<h3>Title</h3>
-						<p>Price</p>
-						<p>Discription</p>
-						<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add to cart<i
-									class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<img src="..." alt="...">
-					<div class="caption">
-						<h3>Title</h3>
-						<p>Price</p>
-						<p>Discription</p>
-						<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add to cart<i
-									class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
-					</div>
-				</div>
-			</div>
-			<div class="container">
-				<div class="row row-flex"
-			</div>
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<img src="..." alt="...">
-					<div class="caption">
-						<h3>Title</h3>
-						<p>Price</p>
-						<p>Discription</p>
-						<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add to cart <i
-									class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<img src="..." alt="...">
-					<div class="caption">
-						<h3>Title</h3>
-						<p>Price</p>
-						<p>Discription</p>
-						<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add to cart <i
-									class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<img src="..." alt="...">
-					<div class="caption">
-						<h3>Title</h3>
-						<p>Price</p>
-						<p>Discription</p>
-						<p><a href="#" class="btn btn-primary" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add to cart <i
-									class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
-					</div>
-				</div>
-			</div>
-		</section>
+<!-- insert <header> tag -->
+<?php require_once("php/partials/header.php"); ?>
 
-		<!-- footer -->
-		<?php require_once("partials/footer.php") ?>
+<div class="container">
+	
+	<!-- angular view directive -->
+	<div ng-view></div>
+
+	
+
+</div>
+
 
 </body>
-</html>
+</html> 

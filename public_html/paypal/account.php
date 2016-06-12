@@ -117,7 +117,12 @@ if (is_object($accounts) && (count(get_object_vars($accounts)) < 1)){
 			<p>Email: <?php echo $account->getAccountPpEmail(); ?></p>
 			<p>UserName: <?php echo $account->getAccountUserName(); ?></p>
 			<p></p>
-			
+
+
+<!-- create an account object and put in session-->
+<!-- start session in super global $_session-->
+<!--if session not started start it-->
+
 
 		</div>
 	</div>
