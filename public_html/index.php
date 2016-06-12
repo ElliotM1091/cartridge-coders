@@ -1,12 +1,12 @@
 <?php
 // inserting the head
-require_once("partials/head-utils.php");?>
+require_once("php/partials/head-utils.php");?>
 
 <body class="sfooter">
 	<div class="sfooter">
 		
 		<!-- header now-->
-		<?php require_once("../epic/header.php") ?>
+		<?php require_once("epic/header.php") ?>
 
 		<!-- contents -->
 		<section id="feature" class="p-y-4">
@@ -130,7 +130,7 @@ require_once("partials/head-utils.php");?>
 		</section>
 
 		<!-- footer -->
-		<?php require_once("partials/footer.php") ?>
+		<?php require_once("php/partials/footer.php") ?>
 
 </body>
 </html>
