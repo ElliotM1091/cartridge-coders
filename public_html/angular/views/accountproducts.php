@@ -1,3 +1,10 @@
+<!doctype html>
+
+<html lang="en" ng-app="AccountProductController">
+<script src="../../angular/controllers/accountproduct-controller.js"></script>
+
+
+
 <div class="row">
 	<table class="table table-bordered table-hover table-responsive table-striped table-word-wrap">
 		<tr><th>Product ID</th><th>Title</th><th>Description</th><th>Price</th><th>Shipping</th></tr>
@@ -10,3 +17,14 @@
 		</tr>
 	</table>
 </div>
+
+
+
+
+
+
+
+
+
+
+</html>

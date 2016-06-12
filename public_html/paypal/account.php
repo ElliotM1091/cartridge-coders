@@ -99,6 +99,7 @@ if (is_object($accounts) && (count(get_object_vars($accounts)) < 1)){
 	// -- GET customer data
 	$account = Account::getAccountByAccountPpEmail($pdo, $accountPpEmail)[0];
 }
+
 ?>
 <!--	----------------------------------------- Leave PHP/ Enter HTML -------------------------------------------->
 
@@ -116,12 +117,7 @@ if (is_object($accounts) && (count(get_object_vars($accounts)) < 1)){
 			<p>Email: <?php echo $account->getAccountPpEmail(); ?></p>
 			<p>UserName: <?php echo $account->getAccountUserName(); ?></p>
 			<p></p>
-
-
 			
-
-
-
 
 		</div>
 	</div>

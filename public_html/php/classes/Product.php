@@ -860,6 +860,8 @@ class Product implements \JsonSerializable {
 		return ($products);
 	}
 
+	
+	
 	/**
 	 * formats the state variables for JSON serialization
 	 *
