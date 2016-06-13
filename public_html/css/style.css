@@ -11,18 +11,18 @@
 	font-size: 18px;
 	font-family: Consolas, Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
 	text-align: center;
-	color: #0971B2;
+	color: #232623;
 	padding: 100px;
 }
 
 
 .profilecss {
-	background-color: darkgrey;
+	background-color: #252925;
 	font-size: 18px;
 	font-family: Consolas, Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
 	text-align: left;
 	color: #0971B2;
-	padding: 100px;
+	padding: 50px;
 }
 
 .homecss {

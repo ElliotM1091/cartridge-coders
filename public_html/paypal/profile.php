@@ -8,25 +8,19 @@
 	<div class="sfooter">
 		<div class="panel profilecss">
 		<p>ROMuLess offers login by PayPal. Signing in with PayPal is quick (just a User Id and Password) and transactions are secured with verified PayPal accounts. PayPal Identity frees you from having yet another login to remember and allows for a seamless checkout. No financial data is storred by ROMuLess and you are protected by PayPal's buyer/seller guarentees.</p>
+		</div>
+
+
+
 			<p><br></p>
-
-
-
-
-
-
-
-			<p><a href="https://www.sandbox.paypal.com/webapps/auth/protocol/openidconnect/v1/authorize?client_id=AWoiHG8w-yaeYyODSBIzJ-awWkLVPo7G9zWJMomAFeMTVw5wyRG_b2pyYxl7a7wB7ByjVLJ0aQ6FdVDj&response_type=code&scope=openid email profile&redirect_uri=https://bootcamp-coders.cnm.edu/~ddeleeuw/cartridge-coders/public_html/paypal/account.php"><img src="../image/paypal-login.png"></img></a> <--- click me to log in</p>
+			<p><a href="https://www.sandbox.paypal.com/webapps/auth/protocol/openidconnect/v1/authorize?client_id=AWoiHG8w-yaeYyODSBIzJ-awWkLVPo7G9zWJMomAFeMTVw5wyRG_b2pyYxl7a7wB7ByjVLJ0aQ6FdVDj&response_type=code&scope=openid email profile&redirect_uri=https://bootcamp-coders.cnm.edu/~ddeleeuw/cartridge-coders/public_html/paypal/account.php"><img src="../image/paypal-login.png"></img></a> <--- click me to log in (testing link only)</p>
 			<p><br></p>
-
-
-
-			<p><a href="https://www.sandbox.paypal.com/webapps/auth/protocol/openidconnect/v1/authorize?client_id=AWoiHG8w-yaeYyODSBIzJ-awWkLVPo7G9zWJMomAFeMTVw5wyRG_b2pyYxl7a7wB7ByjVLJ0aQ6FdVDj&response_type=code&scope=openid email profile&redirect_uri=https://bootcamp-coders.cnm.edu/~ddeleeuw/cartridge-coders/public_html/paypal/account.php"><img src="../image/destroysessiondata.gif"></img></a> <--- click me to log in</p>
+			<p><a href=<?php session_destroy(); ?>><img src="../image/destroysessiondata.gif" width="100" height="100"></img></a> <--- click me to destroy session data (testing link only)</p>
 			<p><br></p>
 			
 			
 			
-							</div>
+
 
 
 
