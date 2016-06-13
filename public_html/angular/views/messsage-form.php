@@ -2,54 +2,6 @@
 	<form name="giveMessage" id="createMessage" class="form-horizontal well" ng-controller="messageController"
 			ng-submit="submit(formData,  giveMessage.$valid);" novalidate>
 		<div class="form-group"
-			  ng-class="{ 'has-error': createMessage.senderId.$touched && createMessage.senderId.$invalid }">
-			<label for="SenderId">SenderId</label>
-			<div class="input-group">
-				<div class="input-group-addon">
-					<i class="fa fa-pencil" aria-hidden="true"></i>
-				</div>
-				<input type="number" class="form-control" id="messageSenderid" name="messageSenderId"
-						 ng-model="createMessage.messageSenderId" ng-maxlength="10" ng-required="true"
-						 placeholder="Numbers only">
-			</div>
-			<div class="alert alert-danger" role="alert" ng-messasges="createMessage.messageSenderId.$error"
-				  ng-if="createMessage.messageSenderId.$touched" ng-hide="createMessage.messageSenderId.$valid">
-			</div>
-		</div>
-
-		<div class="form-group"
-			  ng-class="{ 'has-erorr': createMessage.recipientId.$touched && createMessage.recipientId.$invalid }">
-			<label for="RecipientId">Recipient Id:</label>
-			<div class="input-group">
-				<div class="input-group-addon">
-					<i class="fa fa-usd" aria-hidden="true"></i>
-				</div>
-				<input type="number" class="form-control" id="messageRecipientId" name="messageRecipientId"
-						 ng-model="createMessage.messageRecipientId" ng-maxlength="10" ng-required="true"
-						 placeholder="Numbers only">
-			</div>
-			<div class="alert alert-danger" role="alert" ng-messasges="createMessage.message.$error"
-				  ng-if="createMessage.messageRecipientId.$touched" ng-hide="createMessage.messageRecipientId.$valid">
-			</div>
-		</div>
-
-		<div class="form-group"
-			  ng-class="{ 'has-error': createMessage.messageProductId.$touched && createMessage.messageProductId.$invalid }">
-			<label for="messageProductId">Product</label>
-			<div class="input-group">
-				<div class="input-group-addon">
-					<i class="fa fa-usd" aria-hidden="true"></i>
-				</div>
-				<input type="text" class="form-control" id="messageProductId" name="messageProductId"
-						 ng-model="createMessage.messageProductId" ng-maxlength="10" ng-required="true"
-						 placeholder="Product Id">
-			</div>
-			<div class="alert alert-danger" role="alert" ng-messasges="createMessage.messageProductId.$error"
-				  ng-if="createMessage.messageRecipientId.$touched" ng-hide="createMessage.messageProductId.$valid">
-			</div>
-		</div>
-
-		<div class="form-group"
 			  ng-class="{ 'has-error': createMessage.messageSubject.$touched && createMessage.messageSubject.$invalid }">
 			<label for="messageSubject">Subject:</label>
 			<div class="input-group">
@@ -59,11 +11,6 @@
 				<input type="text" id="messageSubject" name="messageSubject" class="form-control"
 						 ng-model="createMessage.messageSubject" ng-minlegth="5" ng-maxlength="128" ng-required="true"/>
 			</div>
-			<div class="alert alert-danger" role="alert" ng-messages="createProduct.productTitle.$error"
-				  ng-if="createProduct.productTitle.$touched" ng-hide="createProduct.productTitle.$valid">
-				<p ng-message="minlength">Product title is too short.</p>
-				<p ng-message="maxlength">Product title is too long.</p>
-				<p ng-message="required">Please enter a Subject.</p>
 			</div>
 		</div>
 
