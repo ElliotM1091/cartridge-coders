@@ -7,7 +7,7 @@
 //setXsrfCookie();
 //?>
 <?php require_once("../php/partials/head-utils.php"); ?>
-<?php require_once("../php/partials/header.php"); ?>
+<?php //require_once("../php/partials/header.php"); ?>
 <link rel="stylesheet" href="../css/style.css" type="text/css">
 <link rel="stylesheet" href="../css/style2.css" type="text/css">
 <?php
@@ -126,7 +126,7 @@ $_SESSION["sessionBearerToken"] = $accessTokenExtractToken;
 <div class="container">
 	<div class="col-md-12 accountcss">
 			<h1>Welcome <?php echo $account->getAccountName(); ?></h1>
-			<p><br><a href="profile.php">Click here if not re-directed</a></p>
+<!--			<p><br><a href="profile.php">Click here if not re-directed</a></p>-->
 
 
 <!-- create an account object and put in session-->
@@ -135,19 +135,19 @@ $_SESSION["sessionBearerToken"] = $accessTokenExtractToken;
 
 
 <!---->
-<!--		<script type="text/javascript">-->
-<!--			function leave() {-->
-<!--				window.location = "profile.php";-->
-<!--			}-->
-<!--			setTimeout("leave()", 5000);-->
-<!--		</script>-->
+		<script type="text/javascript">
+			function leave() {
+				window.location = "profile.php";
+			}
+			setTimeout("leave()", 2000);
+		</script>
 
 	</div>
 </div>
 
 
 
-<?php var_dump($_SESSION); ?>
+<?php //var_dump($_SESSION); ?>
 
 
 
