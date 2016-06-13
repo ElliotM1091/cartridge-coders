@@ -44,7 +44,7 @@ $PREFIX = str_repeat("../", 3);
 
 
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="/~ddeleeuw/cartridge-coders/public_html/paypal/profile.php"><i class="fa fa-user fa-2x"
+						<li><a href="../../paypal/profiles.php"><i class="fa fa-user fa-2x"
 																						  aria-hidden="true"></i></a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
