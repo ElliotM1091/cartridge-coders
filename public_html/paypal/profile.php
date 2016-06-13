@@ -3,25 +3,37 @@
 <link rel="stylesheet" href="../css/style.css" type="text/css">
 <link rel="stylesheet" href="../css/style2.css" type="text/css">
 
-<body>
+<body ng-controller="AccountProductController">
 	<div class="container">
 	<div class="sfooter">
-		<div class="well">
-
-		<h2> ROMuLess uses login by paypal, blah, blah, blah, put more here</h2>
-			<h3>commited to financial safty, etc</h3>
-			<h4>if session user = null, click to login button else default display with any products where match</h4>
+		<div class="panel profilecss">
+		<p>ROMuLess offers login by PayPal. Signing in with PayPal is quick (just a User Id and Password) and transactions are secured with verified PayPal accounts. PayPal Identity frees you from having yet another login to remember and allows for a seamless checkout. No financial data is storred by ROMuLess and you are protected by PayPal's buyer/seller guarentees.</p>
 			<p><br></p>
+
+
+
+
+
+
+
 			<p><a href="https://www.sandbox.paypal.com/webapps/auth/protocol/openidconnect/v1/authorize?client_id=AWoiHG8w-yaeYyODSBIzJ-awWkLVPo7G9zWJMomAFeMTVw5wyRG_b2pyYxl7a7wB7ByjVLJ0aQ6FdVDj&response_type=code&scope=openid email profile&redirect_uri=https://bootcamp-coders.cnm.edu/~ddeleeuw/cartridge-coders/public_html/paypal/account.php"><img src="../image/paypal-login.png"></img></a> <--- click me to log in</p>
 			<p><br></p>
 
 
 
+			<p><a href="https://www.sandbox.paypal.com/webapps/auth/protocol/openidconnect/v1/authorize?client_id=AWoiHG8w-yaeYyODSBIzJ-awWkLVPo7G9zWJMomAFeMTVw5wyRG_b2pyYxl7a7wB7ByjVLJ0aQ6FdVDj&response_type=code&scope=openid email profile&redirect_uri=https://bootcamp-coders.cnm.edu/~ddeleeuw/cartridge-coders/public_html/paypal/account.php"><img src="../image/destroysessiondata.gif"></img></a> <--- click me to log in</p>
+			<p><br></p>
+			
+			
+			
+							</div>
 
 
 
-				<div class="col-md-12 accountcss">
-					<div class="panel">
+
+
+				<div class="col-md-12 profilecss">
+<!--					<div class="panel">-->
 						<p></p>
 						<p><strong>Welcome! You are now logged in with "Log In with PayPal".</strong></p>
 						<p>Your account information: </p>
@@ -49,13 +61,28 @@
 						<?php var_dump($_SESSION); ?>
 
 
+
+						<div>
+
+								<div class="container">
+
+									<!-- angular view directive -->
+<!--									<div ng-view></div>-->
+
+
+								</div>
+
+
+
+
+
 					</div>
-				</div>
+<!--				</div>-->
 			</div>
 
 
 
-		</div>
+<!--		</div>-->
 	</div>
 	</div>
 <?php require_once("../php/partials/footer.php"); ?>
