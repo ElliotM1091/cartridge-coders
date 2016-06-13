@@ -11,7 +11,7 @@ app.config(function($routeProvider, $locationProvider) {
 		// route for the account page
 		.when('/account', {
 			controller  : 'AccountProductController',
-			templateUrl : 'angular/views/accountproducts.php'
+			templateUrl : 'angular/views/account-products.php'
 		})
 
 		// route for the sign in page
