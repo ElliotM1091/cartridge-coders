@@ -21,7 +21,7 @@ $PREFIX = str_repeat("../", 3);
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
-				<a class="navbar-brand" href="#">ROMuLess</a>
+				<a class="navbar-brand" href="index.html">ROMuLess</a>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<form class="navbar-form navbar-left" role="search">
@@ -30,7 +30,6 @@ $PREFIX = str_repeat("../", 3);
 						</div>
 						<button type="submit" class="btn btn-default">Search</button>
 					</form>
-
 <!--					other areas we can access-->
 					<div class="collapse navbar-collapse" id="main-nav">
 						<ul class="nav navbar-nav navbar-right">
@@ -39,13 +38,8 @@ $PREFIX = str_repeat("../", 3);
 							<li><a href="sendFeedback">Feedback</a></li>
 							</ul>
 					</div>
-
-
-
-
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="/paypal/index.php"><i class="fa fa-user fa-2x"
-																						  aria-hidden="true"></i></a></li>
+						<li><a href="paypal/index.php"><i class="fa fa-user fa-2x" aria-hidden="true"></i></a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
