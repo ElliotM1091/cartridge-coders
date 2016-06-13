@@ -40,7 +40,7 @@ setXsrfCookie();
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
 				  integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
 				  crossorigin="anonymous"></script>
-		
+
 
 		<!--custom CSS-->
 		<link rel="stylesheet" href="css/style2.css" type="text/css" media="">
@@ -53,31 +53,30 @@ setXsrfCookie();
 				  integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
 				  crossorigin="anonymous"></script>
 
-<!--		Angular JS Libraries-->
-				<?php $ANGULAR_VERSION = "1.5.6";?>
-				<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/
+		<!--		Angular JS Libraries-->
+		<?php $ANGULAR_VERSION = "1.5.6";?>
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/
 		<?php echo $ANGULAR_VERSION;?>/angular.min.js"></script>
-				<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/
 		<?php echo $ANGULAR_VERSION;?>/angular-messages.min.js"></script>
-				<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/
 		<?php echo $ANGULAR_VERSION;?>/angular-route.js"></script>
-<!--				<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/-->
-<!--		--><?php //echo $ANGULAR_VERSION;?><!--/angular-animate.js"></script>-->
-				<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.3/ui-bootstrap-tpls.min.js"></script>
+		<!--				<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/-->
+		<!--		--><?php //echo $ANGULAR_VERSION;?><!--/angular-animate.js"></script>-->
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.3/ui-bootstrap-tpls.min.js"></script>
 
 
-					<!--Angular app files (order: app, services, directives, controllers)-->
-					<script type="text/javascript" src="angular/romuless.js"></script>
-					<script type="text/javascript" src="angular/route-config.js"></script>
-					<script type="text/javascript" src="angular/services/product.js"></script>
-					<script type="text/javascript" src="angular/services/image.js"></script>
-					<script type="text/javascript" src="angular/services/product-image.js"></script>
-					<script type="text/javascript" src="angular/controllers/home-controller.js"></script>
-					<script type="text/javascript" src="angular/controllers/account-product-controller.js"></script>
-					<script type="text/javascript" src="angular/controllers/paypal-controller.js"></script>
-					<script type="text/javascript" src="angular/controllers/product-controller.js"></script>
-				<script type="text/javascript" src="angular/controllers/signin-controller.js"></script>-
+		<!--Angular app files (order: app, services, directives, controllers)-->
+		<script type="text/javascript" src="angular/romuless.js"></script>
+		<script type="text/javascript" src="angular/route-config.js"></script>
+		<script type="text/javascript" src="angular/services/product-service.js"></script>
+		<script type="text/javascript" src="angular/services/image-service.js"></script>
+		<script type="text/javascript" src="angular/services/product-image-service.js"></script>
+		<script type="text/javascript" src="angular/controllers/home-controller.js"></script>
+		<script type="text/javascript" src="angular/controllers/account-product-controller.js"></script>
+		<script type="text/javascript" src="angular/controllers/paypal-controller.js"></script>
+		<script type="text/javascript" src="angular/controllers/product-controller.js"></script>
+		<script type="text/javascript" src="angular/controllers/signin-controller.js"></script>-
 
 		<title>ROMuLess</title>
-	</head>  
- 
+	</head>
