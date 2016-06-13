@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
-	<?php require_once("../php/partials/head-utils.php") ?>
+	<!-- head-utils-->
+	<?php require_once("../../php/partials/head-utils.php") ?>
+
+	<link rel="stylesheet" href="../../css/style2.css" type="text/css">
+	<!-- header -->
+	<!-- header now-->
+	<?php require_once("../../php/partials/header.php") ?>
 
 	<body class="sfooter">
 		<div class="sfooter">
 
-			<!-- header now-->
-			<?php require_once("../epic/header.php") ?>
+			<div class="contianer">
 
 			<!-- Feedback content-->
 			<section>
@@ -27,8 +32,10 @@
 				</div>
 			</section>
 
+			</div>
+
 			<!-- footer -->
-			<?php require_once("../php/partials/footer.php") ?>
+			<?php require_once("../../php/partials/footer.php") ?>
 		</div>
 	</body>
 </html>
