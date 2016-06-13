@@ -1,16 +1,17 @@
 <?php
-/**
- * Get the relative path.
- * @see https://raw.githubusercontent.com/kingscreations/farm-to-you/master/php/lib/_header.php FarmToYou Header
- **/
-
-// include the appropriate number of dirname() functions
-// on line 8 to correctly resolve your directory's path
-require_once(dirname(dirname(__DIR__)) . "/root-path.php");
-$CURRENT_DEPTH = substr_count($CURRENT_DIR, "/");
-$ROOT_DEPTH = substr_count($ROOT_PATH, "/");
-$DEPTH_DIFFERENCE = $CURRENT_DEPTH - $ROOT_DEPTH;
-$PREFIX = str_repeat("../", $DEPTH_DIFFERENCE);
+///**
+// * Get the relative path.
+// * @see https://raw.githubusercontent.com/kingscreations/farm-to-you/master/php/lib/_header.php FarmToYou Header
+// **/
+//
+//// include the appropriate number of dirname() functions
+//// on line 9 to correctly resolve your directory's path
+////require_once(dirname(dirname(__DIR__)) . "/root-path.php");
+//$ROOT_PATH = __DIR__;
+//$CURRENT_DEPTH = substr_count($CURRENT_DIR, "/");
+//$ROOT_DEPTH = substr_count($ROOT_PATH, "/");
+//$DEPTH_DIFFERENCE = $CURRENT_DEPTH - $ROOT_DEPTH;
+$PREFIX = str_repeat("../", 3);
 ?>
 <!-- header -->
 <header class="p-y-4">
@@ -33,11 +34,10 @@ $PREFIX = str_repeat("../", $DEPTH_DIFFERENCE);
 <!--					other areas we can access-->
 					<div class="collapse navbar-collapse" id="main-nav">
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="<?php echo $PREFIX; ?>about/index.php">Highlights</a></li>
-							<li><a href="<?php echo $PREFIX; ?>portfolio/index.php">Portfolio</a></li>
-							<li><a href="<?php echo $PREFIX; ?>contact/index.php">Contact Me</a></li>
-							<li><a href="<?php echo $PREFIX; ?>projects/index.php">For Fun</a></li>
-						</ul>
+							<li><a href="<?php echo $PREFIX; ?>/angular/views/product-form.php">Create Product</a></li>
+							<li><a href="<?php echo $PREFIX; ?>/angular/views/message-form.php">Send Message</a></li>
+							<li><a href="<?php echo $PREFIX; ?>/angular/views/feedback-form.php">Feedback</a></li>
+							</ul>
 					</div>
 
 
