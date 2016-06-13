@@ -74,6 +74,7 @@ setXsrfCookie();
 					<script type="text/javascript" src="angular/services/product-image.js"></script>
 					<script type="text/javascript" src="angular/controllers/home-controller.js"></script>
 					<script type="text/javascript" src="angular/controllers/account-product-controller.js"></script>
+					<script type="text/javascript" src="angular/controllers/paypal-controller.js"></script>
 					<script type="text/javascript" src="angular/controllers/product-controller.js"></script>
 				<script type="text/javascript" src="angular/controllers/signin-controller.js"></script>-
 

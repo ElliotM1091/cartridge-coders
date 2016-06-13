@@ -38,8 +38,8 @@ $PREFIX = str_repeat("../", 3);
 							<li><a href="sendFeedback">Feedback</a></li>
 							</ul>
 					</div>
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="paypal/index.php"><i class="fa fa-user fa-2x" aria-hidden="true"></i></a></li>
+					<ul class="nav navbar-nav navbar-right" ng-controller="PaypalController">
+						<li><a ng-click="loadPaypal();"><i class="fa fa-user fa-2x" aria-hidden="true"></i></a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
