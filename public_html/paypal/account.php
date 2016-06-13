@@ -117,10 +117,7 @@ $_SESSION["sessionBearerToken"] = $accessTokenExtractToken;
 
 ?>
 
-
 <!--	----------------------------------------- Leave PHP/ Enter HTML -------------------------------------------->
-
-
 
 
 <div class="container">
@@ -128,13 +125,6 @@ $_SESSION["sessionBearerToken"] = $accessTokenExtractToken;
 			<h1>Welcome <?php echo $account->getAccountName(); ?></h1>
 <!--			<p><br><a href="profile.php">Click here if not re-directed</a></p>-->
 
-
-<!-- create an account object and put in session-->
-<!-- start session in super global $_session-->
-<!--if session not started start it-->
-
-
-<!---->
 		<script type="text/javascript">
 			function leave() {
 				window.location = "profile.php";
@@ -144,12 +134,6 @@ $_SESSION["sessionBearerToken"] = $accessTokenExtractToken;
 
 	</div>
 </div>
-
-
-
-<?php //var_dump($_SESSION); ?>
-
-
 
 </body>
 </html>
