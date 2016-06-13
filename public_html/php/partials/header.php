@@ -1,3 +1,17 @@
+<?php
+/**
+ * Get the relative path.
+ * @see https://raw.githubusercontent.com/kingscreations/farm-to-you/master/php/lib/_header.php FarmToYou Header
+ **/
+
+// include the appropriate number of dirname() functions
+// on line 8 to correctly resolve your directory's path
+require_once(dirname(dirname(__DIR__)) . "/root-path.php");
+$CURRENT_DEPTH = substr_count($CURRENT_DIR, "/");
+$ROOT_DEPTH = substr_count($ROOT_PATH, "/");
+$DEPTH_DIFFERENCE = $CURRENT_DEPTH - $ROOT_DEPTH;
+$PREFIX = str_repeat("../", $DEPTH_DIFFERENCE);
+?>
 <!-- header -->
 <header class="p-y-4">
 	<div class="container">
@@ -15,6 +29,20 @@
 						</div>
 						<button type="submit" class="btn btn-default">Search</button>
 					</form>
+
+<!--					other areas we can access-->
+					<div class="collapse navbar-collapse" id="main-nav">
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="<?php echo $PREFIX; ?>about/index.php">Highlights</a></li>
+							<li><a href="<?php echo $PREFIX; ?>portfolio/index.php">Portfolio</a></li>
+							<li><a href="<?php echo $PREFIX; ?>contact/index.php">Contact Me</a></li>
+							<li><a href="<?php echo $PREFIX; ?>projects/index.php">For Fun</a></li>
+						</ul>
+					</div>
+
+
+
+
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="/~ddeleeuw/cartridge-coders/public_html/paypal/profile.php"><i class="fa fa-user fa-2x"
 																						  aria-hidden="true"></i></a></li>

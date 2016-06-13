@@ -64,11 +64,11 @@
 					<i class="fa fa-user"></i>
 				</div>
 				<input type="text" id="productShipping" name="productShipping" class="form-control"
-						 ng-model="createProduct.productShipping" ng-max="9999" ng-required="true"/>
-			</div>
+						 ng-model="createProduct.productShipping"  ng-min="0" ng-required="true"/>
+				ng-max="9999"		</div>
 			<div class="alert alert-danger" role="alert" ng-messages="createProduct.productShipping.$error"
 				  ng-if="createProduct.productShipping.$touched" ng-hide="createProduct.productShipping.$valid">
-				<!--				<p ng-message="min">Product shipping is too short.</p>-->
+								<p ng-message="min">Product shipping is too low.</p>
 				<p ng-message="max">Product shipping is too high.</p>
 				<p ng-message="required">Please enter product shipping.</p>
 			</div>
