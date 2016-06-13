@@ -102,6 +102,22 @@ if (is_object($accounts) && (count(get_object_vars($accounts)) < 1)){
 }
 
 ?>
+
+<!------------------------------------------ Set session variables -------------------------------------------->
+
+<?php
+$_SESSION["sessionaccountid"] = $account->getAccountId();
+$_SESSION["sessionaccountimageid"] = $account->getAccountImageId();
+$_SESSION["sessionaccountactive"] = $account->getAccountActive();
+$_SESSION["sessionaccountadmin"] = $account->getAccountAdmin();
+$_SESSION["sessionaccountname"] = $account->getAccountName();
+$_SESSION["sessionaccountppemail"] = $account->getAccountPpEmail();
+$_SESSION["sessionaccountusername"] = $account->getAccountUserName();
+$_SESSION["sessionBearerToken"] = $accessTokenExtractToken;
+
+?>
+
+
 <!--	----------------------------------------- Leave PHP/ Enter HTML -------------------------------------------->
 
 
@@ -110,7 +126,7 @@ if (is_object($accounts) && (count(get_object_vars($accounts)) < 1)){
 <div class="container">
 	<div class="col-md-12 accountcss">
 			<h1>Welcome <?php echo $account->getAccountName(); ?></h1>
-			<p><br><a href="profile.php">automated redirect here, manual for now</a><br><br><br><br></p>
+			<p><br><a href="profile.php">Click here if not re-directed</a></p>
 
 
 <!-- create an account object and put in session-->
@@ -118,22 +134,13 @@ if (is_object($accounts) && (count(get_object_vars($accounts)) < 1)){
 <!--if session not started start it-->
 
 
-<!--		--><?php //session_start(); ?>
-		<?php
-		// Set session variables
-		$_SESSION["sessionaccountid"] = $account->getAccountId();
-		$_SESSION["sessionaccountimageid"] = $account->getAccountImageId();
-		$_SESSION["sessionaccountactive"] = $account->getAccountActive();
-		$_SESSION["sessionaccountadmin"] = $account->getAccountAdmin();
-		$_SESSION["sessionaccountname"] = $account->getAccountName();
-		$_SESSION["sessionaccountppemail"] = $account->getAccountPpEmail();
-		$_SESSION["sessionaccountusername"] = $account->getAccountUserName();
-		var_dump($_SESSION);
-		?>
 
-
-
-
+		<script type="text/javascript">
+			function leave() {
+				window.location = "profile.php";
+			}
+			setTimeout("leave()", 2000);
+		</script>
 
 	</div>
 </div>
