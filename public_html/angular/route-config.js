@@ -21,9 +21,9 @@ app.config(function($routeProvider, $locationProvider) {
 		})
 
 		// route for the category page
-		.when('/product', {
-			controller  : 'productController',
-			templateUrl : 'angular/views/product.php'
+		.when('/product-form', {
+			controller  : 'ProductFormController',
+			templateUrl : 'angular/views/product-form.php'
 		})
 
 		// route for the sign up page

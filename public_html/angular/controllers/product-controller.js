@@ -69,9 +69,9 @@ app.controller("ProductController", ["$routeParams", "$scope", "ProductService",
 	// 	});
 	// };
 
-	if($scope.product === null) {
-		$scope.getProduct();
-	}
+	// if($scope.product === null) {
+	// 	$scope.getProduct();
+	// }
 }]);
 
 // embedded modal instance controller to create deletion prompt
