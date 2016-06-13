@@ -1,13 +1,13 @@
 <?php
-// set XSRF cookie
-require_once dirname(__DIR__) . "/php/lib/xsrf.php";
-if(session_status() !== PHP_SESSION_ACTIVE) {
-	session_start();
-}
-setXsrfCookie();
-?>
+//// set XSRF cookie
+//require_once dirname(__DIR__) . "/php/lib/xsrf.php";
+//if(session_status() !== PHP_SESSION_ACTIVE) {
+//	session_start();
+//}
+//setXsrfCookie();
+//?>
 <?php require_once("../php/partials/head-utils.php"); ?>
-<?php //require_once("../php/partials/header.php"); ?>
+<?php require_once("../php/partials/header.php"); ?>
 <link rel="stylesheet" href="../css/style.css" type="text/css">
 <link rel="stylesheet" href="../css/style2.css" type="text/css">
 <?php
@@ -134,16 +134,22 @@ $_SESSION["sessionBearerToken"] = $accessTokenExtractToken;
 <!--if session not started start it-->
 
 
-
-		<script type="text/javascript">
-			function leave() {
-				window.location = "profile.php";
-			}
-			setTimeout("leave()", 3000);
-		</script>
+<!---->
+<!--		<script type="text/javascript">-->
+<!--			function leave() {-->
+<!--				window.location = "profile.php";-->
+<!--			}-->
+<!--			setTimeout("leave()", 5000);-->
+<!--		</script>-->
 
 	</div>
 </div>
+
+
+
+<?php var_dump($_SESSION); ?>
+
+
 
 </body>
 </html>

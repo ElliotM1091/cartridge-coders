@@ -16,7 +16,7 @@
 						<button type="submit" class="btn btn-default">Search</button>
 					</form>
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="paypal/profile.php"><i class="fa fa-user fa-2x"
+						<li><a href="/~ddeleeuw/cartridge-coders/public_html/paypal/profile.php"><i class="fa fa-user fa-2x"
 																						  aria-hidden="true"></i></a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->

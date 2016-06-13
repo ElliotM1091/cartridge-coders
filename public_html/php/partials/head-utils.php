@@ -1,8 +1,9 @@
 <?php
-// verify the session, start if not active
+require_once dirname(__DIR__) . "/lib/xsrf.php";
 if(session_status() !== PHP_SESSION_ACTIVE) {
 	session_start();
 }
+setXsrfCookie();
 ?>
 <!DOCTYPE html> <!--this is the doctype declaration-->
 <html lang="en" ng-app="RomULess">

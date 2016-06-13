@@ -24,9 +24,9 @@
 						<p></p>
 						<p><strong>Welcome! You are now logged in with "Log In with PayPal".</strong></p>
 						<p>Your account information: </p>
-						<p>Name: <?php echo $account->getAccountName(); ?></p>
-						<p>Email: <?php echo $account->getAccountPpEmail(); ?></p>
-						<p>UserName: <?php echo $account->getAccountUserName(); ?></p>
+						<p>Name: <?php echo $_SESSION["sessionaccountname"]; ?></p>
+						<p>Email: <?php echo $_SESSION["sessionaccountppemail"]; ?></p>
+						<p>UserName: <?php echo $_SESSION["sessionaccountusername"]; ?></p>
 						<p></p>
 
 
@@ -34,7 +34,16 @@
 						<!-- start session in super global $_session-->
 						<!--if session not started start it-->
 
-
+<!--						array (size=9)-->
+<!--						'XSRF-TOKEN' => string 'ae7d9f967e764ad96d207d0bdce33a1165533e9a102243f3b506c7e3ab613d0698f0d88999ebc67ee1302d1412972befa413c7c7a057399206818380ac7c24ed' (length=128)-->
+<!--						'sessionaccountid' => int 17-->
+<!--						'sessionaccountimageid' => int 1-->
+<!--						'sessionaccountactive' => int 1-->
+<!--						'sessionaccountadmin' => int 0-->
+<!--						'sessionaccountname' => string 'Humphrey Bogart' (length=15)-->
+<!--						'sessionaccountppemail' => string 'humphrey.bogart@gmail.com' (length=25)-->
+<!--						'sessionaccountusername' => string 'Humphrey17' (length=10)-->
+<!--						'sessionBearerToken' => string 'A015xsSNJjLoWAD3zBRjVw.XqprLk9pIzJxK14Y3vPiOCrY' (length=47)-->
 
 						<?php var_dump($_SESSION); ?>
 
