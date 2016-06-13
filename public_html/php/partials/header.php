@@ -16,7 +16,7 @@
 						<button type="submit" class="btn btn-default">Search</button>
 					</form>
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="https://www.sandbox.paypal.com/webapps/auth/protocol/openidconnect/v1/authorize?client_id=AWoiHG8w-yaeYyODSBIzJ-awWkLVPo7G9zWJMomAFeMTVw5wyRG_b2pyYxl7a7wB7ByjVLJ0aQ6FdVDj&response_type=code&scope=openid email profile&redirect_uri=https://bootcamp-coders.cnm.edu/~ddeleeuw/cartridge-coders/public_html/paypal/account.php"><i class="fa fa-user fa-2x"
+						<li><a href="paypal/profile.php"><i class="fa fa-user fa-2x"
 																						  aria-hidden="true"></i></a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
