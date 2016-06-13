@@ -1,5 +1,5 @@
 <div class="container">
-	<footer class="footer">
+	<footer class="navbar-inverse">
 		<div class="foot-content">
 			<div class="container">
 				<!--footer links/content-->
@@ -15,7 +15,7 @@
 					<div class="col-xs-12 col-md-6">
 						<div class="foot-links col-md-6"></div>
 						<div class="foot-links col-md-6">
-							<h4>come along for the ride</h4>
+							<h4 class="footer-info">Take a look at this stuff!</h4>
 							<a href=""><i class="fa fa-twitter-square fa-3x" aria-hidden="true"> |</i></a>
 							<a href=""><i class="fa fa-facebook-square fa-3x" aria-hidden="true"> |</i></a>
 							<a href=""><i class="fa fa-github-square fa-3x" aria-hidden="true"> |</i></a>

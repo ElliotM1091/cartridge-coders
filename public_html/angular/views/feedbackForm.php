@@ -20,7 +20,8 @@ require_once("php/partials/head-utils.php"); ?>
 					<input type="number" class="form-control" id="feedbackSenderid" name="feedbackSenderId" nu-model="createFeedback.feedbackSenderId" ng-maxlength="10" ng-requeired="true" placeholder="Numbers only">
 				</div>
 				<div class="alert alert-danger" role="alert" ng-messasges="createFeedback.feedbackSenderId.$error" ng-if="createFeedback.feedbackSenderId.$touched" ng-hide="createFeedback.feedbackSenderId.$valid">
-					<p ng-message="maxlength"> sorry sender </p>
+					<p ng-message="maxlength"> sorry senderId too long</p> <!-- delete this? -->
+					<p ng-message="required"> your forgot senderId go back and try again </p>  <!-- prob gonna delete this too?-->
 			</div>
 			<div class="form-group">
 				<label for="recipientId">Recipient Id:</label>
