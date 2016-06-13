@@ -1,10 +1,10 @@
-app.controller("ProductController", ["$routeParams", "$scope", "$uibModal", "$window", "ProductService", function($routeParams, $scope, $uibModal, $window, MisquoteService) {
-	$scope.deletedProduct = false;
-	$scope.product = null;
+app.controller("ProductController", ["$routeParams", "$scope", "ProductService", function($routeParams, $scope, ProductService) {
+	
+	
 	$scope.alerts = [];
 
-	$scope.getProduct = function() {
-		ProductService.fetch($routeParams.id)
+	$scope.createProduct = function() {
+		ProductService.create($routeParams.id)
 			.then(function(result) {
 				if(result.status === 200) {
 					if(result.data !== undefined) {

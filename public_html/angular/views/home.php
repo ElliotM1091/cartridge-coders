@@ -16,7 +16,7 @@
 			<input type="hidden" name="cmd" value="_xclick">
 			<input type="hidden" name="business" value="cartridgecoders-buyer@gmail.com"> <!-- accoutPpEmail of productAccountId -->
 			<input type="hidden" name="lc" value="US">
-			<input type="hidden" name="item_name" value="Box Fan"> <!-- productDescription -->
+			<input type="hidden" name="item_name" value="{{ productTitle}}"> <!-- productDescription -->
 			<input type="hidden" name="item_number" value="2HOT"> <!-- productId -->
 			<input type="hidden" name="amount" value="200.00"> <!-- productPrice + productShipping -->
 			<input type="hidden" name="currency_code" value="MXN">
