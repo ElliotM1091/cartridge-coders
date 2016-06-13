@@ -19,7 +19,6 @@
 
 
 
-				<div class="col-md-12" style="background-color: white"><p><br></p></div>
 				<div class="col-md-12 accountcss">
 					<div class="panel">
 						<p></p>
@@ -39,7 +38,7 @@
 
 						<?php var_dump($_SESSION); ?>
 
-						
+
 					</div>
 				</div>
 			</div>

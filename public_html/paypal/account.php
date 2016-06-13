@@ -139,7 +139,7 @@ $_SESSION["sessionBearerToken"] = $accessTokenExtractToken;
 			function leave() {
 				window.location = "profile.php";
 			}
-			setTimeout("leave()", 2000);
+			setTimeout("leave()", 3000);
 		</script>
 
 	</div>
