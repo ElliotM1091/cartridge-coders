@@ -1,14 +1,3 @@
-<?php
-// inserting the head
-require_once("php/partials/head-utils.php"); ?>
-
-<!-- header now-->
-<?php require_once("php/partials/header.php") ?>
-
-
-<body class="sfooter" ng-controller="FeedbackController">
-	<div class="sfooter">
-
 
 		<form name="giveFeedback" id="createFeedback" class="form-horizontal well" ng-controller="feedbackController" ng-submit="submit(formData,  giveFeedback.$valid);" novalidate>
 			<div class="form-group" ng-class="{ 'has-error': createFeedback.senderId.$touched && createFeedback.senderId.$invalid }">
@@ -41,31 +30,33 @@ require_once("php/partials/head-utils.php"); ?>
 					<div class="input-group-addon">
 						<i class="fa fa-usd" aria-hidden="true"></i>
 					</div>
-					<input type="text" class="form-control" id="feedbackProductId" name="feedbackProductId" ng-model="createFeedback.feedbackProductId" ng-maxlength="255" ng-required="true" placeholder="Product Id">
+					<input type="text" class="form-control" id="feedbackProductId" name="feedbackProductId" ng-model="createFeedback.feedbackProductId" ng-maxlength="10" ng-required="true" placeholder="Product Id">
 				</div>
 				<div class="alert alert-danger" role="alert" ng-messasges="createFeedback.feedbackSenderId.$error" ng-if="createFeedback.feedbackRecipientId.$touched" ng-hide="createFeedback.feedbackRecipientId.$valid">
 					<p ng-message="maxlength"> sorry senderId too long</p>
 					<p ng-message="required"> your forgot senderId go back and try again </p>
 			</div>
-			<div class="form-group">
+			<!--<div class="form-group" ng-class="{ 'has-error': createFeedback.rating.$touched && crateFeedback.feedbackRating.$invalid">
 				<label for="rating">Rating</label>
 				<div class="input-group">
 					<div class="input-group-addon">
-						
 					</div>
 					<div class="rating">
 						<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
 					</div>
 				</div>
-			</div>
-			<div class="form-group">
+			</div> -->
+			<div class="form-group" ng-class="{ 'has-error': createFeedback.product.$touched && createFeedback.feedbackContent.$invalid  }">
 				<label for="content">Feedback</label>
 				<div class="input-group">
 					<div class="input-group-addon">
 						<i class="fa fa-pencil" aria-hidden="true"></i>
 					</div>
-					<textarea class="form-control" rows="5" id="content" name="content" placeholder="Feedback(255 characters total"></textarea>
+					<textarea class="form-control" rows="5" id="feedbackContent" name="feedbackContent" ng-model="createFeedback.feedbaclContent" ng-maxlength="255" ng-required="true" placeholder="Tell us how you really feel(255 characters total"></textarea>
 				</div>
+				<div class="alert alert-danger" role="alert" ng-messasges="createFeedback.feedbackSenderId.$error" ng-if="createFeedback.feedbackRecipientId.$touched" ng-hide="createFeedback.feedbackRecipientId.$valid">
+					<p ng-message="maxlength"> sorry try and shorten the content a little </p>
+					<p ng-message="required"> give some feedback it's free!</p>
 			</div>
 			<button class="btn btn-success" type="submit"><i class="fa fa-paper-plane"></i> Send</button>
 			<button class="btn btn-warning" type="reset"><i class="fa fa-ban"></i> Reset</button>
