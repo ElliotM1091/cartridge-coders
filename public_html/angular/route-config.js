@@ -9,9 +9,9 @@ app.config(function($routeProvider, $locationProvider) {
 		})
 
 		// route for the cart page
-		.when('/cart', {
-			controller  : 'cartController',
-			templateUrl : 'angular/views/cart.php'
+		.when('/account', {
+			controller  : 'AccountProductController',
+			templateUrl : 'angular/views/accountproducts.php'
 		})
 
 		// route for the sign in page
