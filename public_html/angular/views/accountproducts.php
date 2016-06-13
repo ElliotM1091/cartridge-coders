@@ -1,59 +1,41 @@
-<!doctype html>
-
-<html lang="en" ng-app="AccountProductController">
-	<head>
-
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-		
-
-	</head>
-
-<body>
-
-	<div ng-controller = "AccountProductController">
-		<ul>
-			<li class="productlist" ng-repeat="items in productlist">
-				<div class=""info">
-				<p>{{item.productAccountId}}</p>
-				<p>{{item.productTitle}}</p>
-				<p>{{item.productPrice}}</p>
+<!-- contents -->
+<section id="feature" class="p-y-4">
+	<div class="row row-flex">
+		<div ng-repeat="product in products" class="col-sm-6 col-md-4">
+			<div class="thumbnail">
+				<img ng-src="../public_html/image/cartridge/{{ product.productImageFileName }}"
+					  alt="{{ product.productImageFileName }}">
+				<div class="caption">
+					<h3>{{ product.productTitle }}</h3>
+					<p>{{ product.productPrice }}</p>
+					<p>{{ product.productDescription }}</p>
+					<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+						<input type="hidden" name="cmd" value="_xclick">
+						<input type="hidden" name="business" value="cartridgecoders-buyer@gmail.com">
+						<!-- accoutPpEmail of productAccountId -->
+						<input type="hidden" name="lc" value="US">
+						<input type="hidden" name="item_name" value="Box Fan"> <!-- productDescription -->
+						<input type="hidden" name="item_number" value="2HOT"> <!-- productId -->
+						<input type="hidden" name="amount" value="200.00"> <!-- productPrice + productShipping -->
+						<input type="hidden" name="currency_code" value="MXN">
+						<input type="hidden" name="button_subtype" value="services">
+						<input type="hidden" name="no_note" value="0">
+						<input type="hidden" name="cn" value="Add special instructions to the seller:">
+						<input type="hidden" name="no_shipping" value="2">
+						<input type="hidden" name="rm" value="1">
+						<input type="hidden" name="return"
+								 value="https://bootcamp-coders.cnm.edu/~ddeleeuw/cartridge-coders/public_html/index.php">
+						<input type="hidden" name="cancel_return"
+								 value="https://bootcamp-coders.cnm.edu/~ddeleeuw/cartridge-coders/public_html/index.php">
+						<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_SM.gif:NonHosted">
+						<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynow_SM.gif"
+								 border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+						<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1"
+							  height="1">
+					</form>
+					</p>
+				</div>
+			</div>
+		</div>
 	</div>
-
-
-			</li>
-		</ul>
-
-
-
-
-
-
-	</div>
-
-
-</body>
-
-
-<!--<div class="row">-->
-<!--	<table class="table table-bordered table-hover table-responsive table-striped table-word-wrap">-->
-<!--		<tr><th>Product ID</th><th>Title</th><th>Description</th><th>Price</th><th>Shipping</th></tr>-->
-<!--		<tr ng-click="loadProduct(products[$index].productId);" ng-repeat="product in products | filter: search">-->
-<!--			<td>{{ product.productId }}</td>-->
-<!--			<td>{{ product.title }}</td>-->
-<!--			<td>{{ product.description }}</td>-->
-<!--			<td>{{ product.price }}</td>-->
-<!--			<td>{{ product.shipping }}</td>-->
-<!--		</tr>-->
-<!--	</table>-->
-<!--</div>-->
-
-
-
-
-
-
-
-
-
-
-</html>
+</section>

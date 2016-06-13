@@ -8,7 +8,7 @@ app.config(function($routeProvider, $locationProvider) {
 			templateUrl : 'angular/views/home.php'
 		})
 
-		// route for the cart page
+		// route for the account page
 		.when('/account', {
 			controller  : 'AccountProductController',
 			templateUrl : 'angular/views/accountproducts.php'
