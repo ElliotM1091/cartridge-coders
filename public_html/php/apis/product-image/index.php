@@ -35,7 +35,7 @@ try {
 		setXsrfCookie();
 
 //		$getProductsWithImages = function () {
-		$products = CartridgeCoders\Product::getAllProducts($pdo);
+		$products = CartridgeCoders\Product::getAllProducts($pdo)->toArray();
 		if($products !== null) {
 
 			$index = json_encode($products);
@@ -48,9 +48,10 @@ try {
 				$productImageJson = json_encode($productImage);
 				$productImageUnJson = json_decode($productImageJson);
 
-				$values->productImageId = $productImageUnJson->imageFileName;
+				$values->productImageFileName = $productImageUnJson->imageFileName;
 
 			}
+//			var_dump($imageData);
 			$reply->data = $imageData;
 		}
 //		};
