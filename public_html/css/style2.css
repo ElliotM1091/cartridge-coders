@@ -37,7 +37,7 @@ body { width: 100%;}
 }
 
 .footer {
-	background-color: black;
+	background-color: #2f2f2f;
 }
 
 .footer-ROMuLess {
@@ -58,4 +58,8 @@ body { width: 100%;}
 .rating > span:hover ~ span:before {
 	content: "\2605";
 	position: absolute;
+}
+
+i {
+	color: dodgerblue;
 }

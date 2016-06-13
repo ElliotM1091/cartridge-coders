@@ -1,47 +1,26 @@
-<!DOCTYPE html> <!--this is the doctype declaration-->
-<html lang="en"><!--this is to set this page to english-->
-	<head>  <!--this is the head tag to start the doc out-->
+<?php
+// inserting the head
+require_once("php/partials/head-utils.php"); ?>
 
-		<!--this is hte 8 bit setting used universally. this is a self closing tag-->
-		<meta charset="utf-8">
-		<!--this helps out IE-->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-		<!--going to be used for view port -->
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-				integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!-- header now-->
+<?php require_once("php/partials/header.php") ?>
 
 
-		<!-- Font Awesome -->
-		<link type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css"
-				rel="stylesheet"/>
-
-		<!--customer CSS-->
-		<link rel="stylesheet" href="../../epic/style2.css" type="text/css">
-		<!-- favicon -->
-		<link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon"/>
-
-		<!-- jQuery (needed for Bootstrap's JavaScript plugins) -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-				  integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-				  crossorigin="anonymous"></script>
+<body class="sfooter" ng-controller="FeedbackController">
+	<div class="sfooter">
 
 
-	<body>
-		<form class="form-horizontal well" action="email.php">
-			<div class="form-group">
+		<form name="giveFeedback" id="createFeedback" class="form-horizontal well" ng-controller="feedbackController" ng-submit="submit(formData,  giveFeedback.$valid);" novalidate>
+			<div class="form-group" ng-class="{ 'has-error': createFeedback.senderId.$touched && createFeedback.senderId.$invalid">
 				<label for="SenderId">SenderId</label>
 				<div class="input-group">
 					<div class="input-group-addon">
 						<i class="fa fa-pencil" aria-hidden="true"></i>
 					</div>
-					<input type="number" class="form-control" id="senderid" title="senderId" placeholder="Numbers only">
+					<input type="number" class="form-control" id="feedbackSenderid" name="feedbackSenderId" nu-model="createFeedback.feedbackSenderId" ng-maxlength="10" ng-requeired="true" placeholder="Numbers only">
 				</div>
+				<div class="alert alert-danger" role="alert" ng-messasges="createFeedback.feedbackSenderId.$error" ng-if="createFeedback.feedbackSenderId.$touched" ng-hide="createFeedback.feedbackSenderId.$valid">
+					<p ng-message="maxlength"> sorry sender </p>
 			</div>
 			<div class="form-group">
 				<label for="recipientId">Recipient Id:</label>

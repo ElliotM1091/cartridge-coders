@@ -20,5 +20,10 @@ form leave feedback
 menu bar function
 search function
 
+doing the session stuff for the header.
 
+need to do
 
+get search bar working.
+
+for presentation:
