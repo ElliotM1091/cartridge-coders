@@ -114,7 +114,6 @@ $_SESSION["sessionaccountname"] = $account->getAccountName();
 $_SESSION["sessionaccountppemail"] = $account->getAccountPpEmail();
 $_SESSION["sessionaccountusername"] = $account->getAccountUserName();
 $_SESSION["sessionBearerToken"] = $accessTokenExtractToken;
-
 ?>
 
 <!--	----------------------------------------- Leave PHP/ Enter HTML -------------------------------------------->
@@ -131,9 +130,7 @@ $_SESSION["sessionBearerToken"] = $accessTokenExtractToken;
 			}
 			setTimeout("leave()", 2000);
 		</script>
-
 	</div>
 </div>
-
 </body>
 </html>
