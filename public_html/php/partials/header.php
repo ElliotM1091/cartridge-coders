@@ -34,9 +34,9 @@ $PREFIX = str_repeat("../", 3);
 <!--					other areas we can access-->
 					<div class="collapse navbar-collapse" id="main-nav">
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="<?php echo $PREFIX; ?>/angular/views/product-form.php">Create Product</a></li>
-							<li><a href="<?php echo $PREFIX; ?>/angular/views/message-form.php">Send Message</a></li>
-							<li><a href="<?php echo $PREFIX; ?>/angular/views/feedback-form.php">Feedback</a></li>
+							<li><a href="createProduct">Create Product</a></li>
+							<li><a href="sendMessage">Send Message</a></li>
+							<li><a href="sendFeedback">Feedback</a></li>
 							</ul>
 					</div>
 

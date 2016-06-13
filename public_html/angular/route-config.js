@@ -14,22 +14,22 @@ app.config(function($routeProvider, $locationProvider) {
 			templateUrl : 'angular/views/account-products.php'
 		})
 
-		// route for the sign in page
-		.when('/signin', {
-			controller  : 'signinController',
-			templateUrl : 'angular/views/signin.php'
+		// route for the sending message
+		.when('/sendMessage', {
+			controller  : 'MessageController',
+			templateUrl : 'angular/views/message-form.php'
 		})
 
-		// route for the category page
-		.when('/product-form', {
+		// route for creating a product
+		.when('/createProduct', {
 			controller  : 'ProductFormController',
 			templateUrl : 'angular/views/product-form.php'
 		})
 
-		// route for the sign up page
-		.when('/search-results', {
-			controller  : 'searchResultsController',
-			templateUrl : 'angular/views/search-results.php'
+		// route for the sending feedback
+		.when('/sendFeedback', {
+			controller  : 'FeedbackController',
+			templateUrl : 'angular/views/feedback-form.php'
 		})
 
 		// otherwise redirect to home
