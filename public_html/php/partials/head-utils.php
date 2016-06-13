@@ -55,7 +55,7 @@ if(session_status() !== PHP_SESSION_ACTIVE) {
 				  integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
 				  crossorigin="anonymous"></script>
 
-		Angular JS Libraries
+<!--		Angular JS Libraries-->
 				<?php $ANGULAR_VERSION = "1.5.6";?>
 				<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/
 		<?php echo $ANGULAR_VERSION;?>/angular.min.js"></script>
@@ -63,20 +63,11 @@ if(session_status() !== PHP_SESSION_ACTIVE) {
 		<?php echo $ANGULAR_VERSION;?>/angular-messages.min.js"></script>
 				<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/
 		<?php echo $ANGULAR_VERSION;?>/angular-route.js"></script>
-				<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/
-		<?php echo $ANGULAR_VERSION;?>/angular-animate.js"></script>
+<!--				<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/-->
+<!--		--><?php //echo $ANGULAR_VERSION;?><!--/angular-animate.js"></script>-->
 				<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.3/ui-bootstrap-tpls.min.js"></script>
 
 
-		<!--			<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/-->
-		<?php //echo $ANGULAR_VERSION; ?><!--/angular.min.js"></script>-->
-		<!--			<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/-->
-		<?php //echo $ANGULAR_VERSION; ?><!--/angular-messages.min.js"></script>-->
-		<!--			<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/-->
-		<?php //echo $ANGULAR_VERSION; ?><!--/angular-route.min.js"></script>-->
-		<!--			<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.2.1/ui-bootstrap-tpls.min.js"></script>-->
-		<!--			<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-pusher/0.0.14/angular-pusher.min.js"></script>-->
-		<!---->
 					<!--Angular app files (order: app, services, directives, controllers)-->
 					<script type="text/javascript" src="angular/romuless.js"></script>
 					<script type="text/javascript" src="angular/route-config.js"></script>
@@ -86,19 +77,6 @@ if(session_status() !== PHP_SESSION_ACTIVE) {
 					<script type="text/javascript" src="angular/controllers/home-controller.js"></script>
 					<script type="text/javascript" src="angular/controllers/product-controller.js"></script>
 				<script type="text/javascript" src="angular/controllers/signin-controller.js"></script>-
-
-
-
-
-		<!--Angular app files (order: app, services, directives, controllers)
-		<script type="text/javascript" src="angular/romuless.js"></script>
-		<script type="text/javascript" src="angular/route-config.js"></script>
-		<script type="text/javascript" src="angular/services/product.js"></script>
-		<script type="text/javascript" src="angular/controllers/home-controller.js"></script>
-		<!--		<script type="text/javascript" src="angular/controllers/search-results-controller.js"></script>-->
-		<!--		<script type="text/javascript" src="angular/controllers/signin-controller.js"></script>-
-		<script type="text/javascript" src="angular/controllers/product-controller.js"></script>
-		<!--		<script type="text/javascript" src="angular/controllers/cart-controller.js"></script>-->
 
 		<title>ROMuLess</title>
 	</head>

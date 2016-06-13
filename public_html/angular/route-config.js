@@ -4,7 +4,7 @@ app.config(function($routeProvider, $locationProvider) {
 
 	// route for the home page
 		.when('/', {
-			controller  : 'homeController',
+			controller  : 'HomeController',
 			templateUrl : 'angular/views/home.php'
 		})
 
