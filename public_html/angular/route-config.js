@@ -9,7 +9,7 @@ app.config(function($routeProvider, $locationProvider) {
 		})
 
 		// route for the account page
-		.when('/account', {
+		.when('/profile', {
 			controller  : 'AccountProductController',
 			templateUrl : 'angular/views/account-products.php'
 		})
