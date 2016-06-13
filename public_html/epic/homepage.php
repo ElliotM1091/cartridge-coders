@@ -106,7 +106,7 @@
 						</div>
 					</div>
 				</div>
-			</header>
+			</header> 
 
 			<!-- contents -->
 			<section id="feature" class="p-y-4">

@@ -53,7 +53,7 @@
 		<a href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_xclick&business=cartridgecoders%2dfacilitator%40gmail%2ecom&lc=US&item_name=Box%20Fan&item_number=2HOT&amount=200%2e00&currency_code=MXN&button_subtype=services&no_note=0&cn=Add%20special%20instructions%20to%20the%20seller%3a&no_shipping=2&rm=1&return=https%3a%2f%2fbootcamp%2dcoders%2ecnm%2eedu%2f%7eddeleeuw%2fcartridge%2dcoders%2fpublic_html%2findex%2ephp&cancel_return=https%3a%2f%2fbootcamp%2dcoders%2ecnm%2eedu%2f%7eddeleeuw%2fcartridge%2dcoders%2fpublic_html%2findex%2ephp&bn=PP%2dBuyNowBF%3abtn_buynow_SM%2egif%3aNonHosted">Buy Now!</a>
 
 
-
+  
 
 	</div>
 	<div class="col-md-9">Game Description Game Description Game Description Game Description Game Description Game Description Game Description Game Description Game Description Game Description Game Description Game Description Game Description Game Description Game Description Game Description Game Description Game Description Game Description Game Description Game Description Game Description Game Description Game Description Game Description Game Description Game Description Game Description Game Description Game Description Game Description Game Description Game Description </div>
