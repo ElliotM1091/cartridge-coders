@@ -24,8 +24,8 @@
 					<p ng-message="maxlength"> sorry recipientId too long</p> <!-- delete this? -->
 					<p ng-message="required"> your forgot recipientId go back and try again </p>  <!-- prob gonna delete this too?-->
 			</div>
-			<div class="form-group" ng-class="{ 'has-error': createFeedback.product.$touched && createFeedback.feedbackProductId.$invalid }">
-				<label for="product">Product</label>
+			<div class="form-group" ng-class="{ 'has-error': createFeedback.feedbaclProductId.$touched && createFeedback.feedbackProductId.$invalid }">
+				<label for="feedbackProductId">Product</label>
 				<div class="input-group">
 					<div class="input-group-addon">
 						<i class="fa fa-usd" aria-hidden="true"></i>

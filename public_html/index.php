@@ -17,10 +17,11 @@ require_once("php/partials/head-utils.php"); ?>
 
 
 		</div>
-		
+
 
 		<!-- footer -->
 		<?php require_once("php/partials/footer.php") ?>
+	</div>
 
 </body>
 </html>
