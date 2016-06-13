@@ -17,7 +17,7 @@ require_once("php/partials/head-utils.php"); ?>
 					<div class="input-group-addon">
 						<i class="fa fa-pencil" aria-hidden="true"></i>
 					</div>
-					<input type="number" class="form-control" id="feedbackSenderid" name="feedbackSenderId" nu-model="createFeedback.feedbackSenderId" ng-maxlength="10" ng-requeired="true" placeholder="Numbers only">
+					<input type="number" class="form-control" id="feedbackSenderid" name="feedbackSenderId" ng-model="createFeedback.feedbackSenderId" ng-maxlength="10" ng-requeired="true" placeholder="Numbers only">
 				</div>
 				<div class="alert alert-danger" role="alert" ng-messasges="createFeedback.feedbackSenderId.$error" ng-if="createFeedback.feedbackSenderId.$touched" ng-hide="createFeedback.feedbackSenderId.$valid">
 					<p ng-message="maxlength"> sorry senderId too long</p> <!-- delete this? -->
