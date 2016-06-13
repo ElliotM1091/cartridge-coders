@@ -76,7 +76,7 @@ setXsrfCookie();
 		<script type="text/javascript" src="../controllers/account-product-controller.js"></script>
 					<script type="text/javascript" src="angular/controllers/product-controller.js"></script>
 				<script type="text/javascript" src="angular/controllers/signin-controller.js"></script>-
-j
+
 		<title>ROMuLess</title>
 	</head>  
  
