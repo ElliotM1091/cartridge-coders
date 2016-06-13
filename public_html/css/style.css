@@ -7,11 +7,11 @@
 }
 
 .accountcss {
-	background-color: black;
+	/*background-color: black;*/
 	font-size: 18px;
 	font-family: Consolas, Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
 	text-align: center;
-	color: grey;
+	color: #0971B2;
 	padding: 100px;
 }
 

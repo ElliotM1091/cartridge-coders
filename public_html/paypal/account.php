@@ -7,8 +7,9 @@ if(session_status() !== PHP_SESSION_ACTIVE) {
 setXsrfCookie();
 ?>
 <?php require_once("../php/partials/head-utils.php"); ?>
-<?php require_once("../php/partials/header.php"); ?>
+<?php //require_once("../php/partials/header.php"); ?>
 <link rel="stylesheet" href="../css/style.css" type="text/css">
+<link rel="stylesheet" href="../css/style2.css" type="text/css">
 <?php
 // ---------------------------------------- encrypted config files -------------------------------------
 require_once("/etc/apache2/capstone-mysql/encrypted-config.php");
@@ -107,16 +108,9 @@ if (is_object($accounts) && (count(get_object_vars($accounts)) < 1)){
 
 
 <div class="container">
-	<div class="col-md-12" style="background-color: white"><p><br></p></div>
 	<div class="col-md-12 accountcss">
-		<div class="panel">
-			<p></p>
-			<p><strong>Welcome! You are now logged in with "Log In with PayPal".</strong></p>
-			<p>Your account information: </p>
-			<p>Name: <?php echo $account->getAccountName(); ?></p>
-			<p>Email: <?php echo $account->getAccountPpEmail(); ?></p>
-			<p>UserName: <?php echo $account->getAccountUserName(); ?></p>
-			<p></p>
+			<h1>Welcome <?php echo $account->getAccountName(); ?></h1>
+			<p><br><a href="profile.php">automated redirect here, manual for now</a></p>
 
 
 <!-- create an account object and put in session-->
@@ -124,7 +118,7 @@ if (is_object($accounts) && (count(get_object_vars($accounts)) < 1)){
 <!--if session not started start it-->
 
 
-		</div>
+
 	</div>
 </div>
 
