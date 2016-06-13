@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="../css/style.css" type="text/css">
 <link rel="stylesheet" href="../css/style2.css" type="text/css">
 
-<body>
+<body ng-controller="HomeController">
 	<div class="container">
 		<div class="sfooter">
 			<div class="panel profilecss">
