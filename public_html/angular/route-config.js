@@ -22,7 +22,7 @@ app.config(function($routeProvider, $locationProvider) {
 
 		// route for creating a product
 		.when('/createProduct', {
-			controller  : 'ProductFormController',
+			controller  : 'ProductController',
 			templateUrl : 'angular/views/product-form.php'
 		})
 

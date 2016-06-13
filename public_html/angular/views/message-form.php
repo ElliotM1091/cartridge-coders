@@ -11,8 +11,8 @@
 				<input type="text" id="messageSubject" name="messageSubject" class="form-control"
 						 ng-model="createMessage.messageSubject" ng-minlegth="5" ng-maxlength="128" ng-required="true"/>
 			</div>
-			</div>
 		</div>
+
 
 		<div class="form-group"
 			  ng-class="{ 'has-error': createMessage.messageContent.$touched && createMessage.messageContent.$invalid  }">
@@ -34,3 +34,4 @@
 			<button class="btn btn-warning" type="reset"><i class="fa fa-ban"></i> Reset</button>
 		</div>
 	</form>
+</div>
