@@ -2,7 +2,13 @@
 <!-- contents -->
 <section id="feature" class="p-y-4">
 		<div class="row row-flex">
-			<div ng-repeat="product in products" class="col-sm-6 col-md-4">
+			<form class="form-inline">
+				<div class="form-group">
+<!--					<label >Search</label>-->
+					<input type="text" ng-model="search" class="form-control" placeholder="Search">
+				</div>
+			</form>
+			<div ng-repeat="product in products | filter:search" class="col-sm-6 col-md-4">
 				<div class="thumbnail">
 					<img ng-src="../public_html/image/cartridge/{{ product.productImageFileName }}"
 						  alt="{{ product.productImageFileName }}">

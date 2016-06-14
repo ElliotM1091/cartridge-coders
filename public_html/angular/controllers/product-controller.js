@@ -1,6 +1,6 @@
 app.controller("ProductController", ["$routeParams", "$scope", "ProductService", function($routeParams, $scope, ProductService) {
 
-	$scope.newProduct = {productId: null, productAccountId: null, productImageId: null, productAdminFee: null, productDescription: "", productPrice: null, productShipping: null, productSold: null, productTitle: ""};
+	$scope.newProduct = {productId: null, productAccountId: "5", productImageId: "16", productAdminFee: "0", productDescription: "", productPrice: null, productShipping: null, productSold: "0", productTitle: ""};
 	$scope.alerts = [];
 
 	/**

@@ -62,12 +62,13 @@
 				<p ng-message="maxlength">Shipping is too big.</p>
 			</div>
 		</div>
-		<div ng-hide="newProduct.productSold" ng-hide="newProduct.productAccountId" ng-hide="newProduct.productImageId" ng-hide="newProduct.productAdminFee">
-		<input type="text" name="addAccount" id="addAccount"  class="form-control" ng-model="newProduct.productAccountId" ng-init="newProduct.productAccountId='10'"/>
-		<input type="text" name="addImage" id="addImage"  class="form-control" ng-model="newProduct.productImageId" ng-init="newProduct.productImageId='16'"/>
-		<input type="text" name="addAccount" id="addAccount"  class="form-control" ng-model="newProduct.productAdminFee" ng-init="newProduct.productAdminFee='0'"/>
-		<input type="text" name="addImage" id="addImage"  class="form-control" ng-model="newProduct.productSold" ng-init="newProduct.productSold='0'"/>
-		</div>
+<!--		<div ng-init="newProduct.productAccountId='10'"></div>-->
+<!--		<div ng-hide="newProduct.productSold" ng-hide="newProduct.productAccountId" ng-hide="newProduct.productImageId" ng-hide="newProduct.productAdminFee">-->
+<!--		<input type="text" name="addAccount" id="addAccount"  class="form-control" ng-model="newProduct.productAccountId" ng-init="newProduct.productAccountId='10'"/>-->
+<!--		<input type="text" name="addImage" id="addImage"  class="form-control" ng-model="newProduct.productImageId" ng-init="newProduct.productImageId='16'"/>-->
+<!--		<input type="text" name="addAccount" id="addAccount"  class="form-control" ng-model="newProduct.productAdminFee" ng-init="newProduct.productAdminFee='0'"/>-->
+<!--		<input type="text" name="addImage" id="addImage"  class="form-control" ng-model="newProduct.productSold" ng-init="newProduct.productSold='0'"/>-->
+<!--		</div>-->
 
 		<button type="submit" class="btn btn-info btn-lg" ng-disabled="addProductForm.$invalid"><i class="fa fa-share"></i> Product</button>
 		<button type="reset" class="btn btn-warning btn-lg"><i class="fa fa-ban"></i> Cancel</button>
