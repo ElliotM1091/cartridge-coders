@@ -7,7 +7,7 @@ app.controller("MessageController", ["$routeParams", "$scope", "MessageService",
 	 * create a message and sends to message api
 	 *
 	 * @param message to send
-	 * @param validated true if Angular validated the form, false if now
+	 * @param validated true if Angular validated the form, false if not
 	 **/
 
 	$scope.createMessage = function(message, validated) {
