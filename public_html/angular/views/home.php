@@ -1,13 +1,17 @@
 
 <!-- contents -->
-<section id="feature" class="p-y-4">
+<section id="feature" class="p-y-4" xmlns="http://www.w3.org/1999/html">
+	<div class="row">
+
+	<form class="navbar-form " >
+		<div class="form-group">
+			<!--					<label >Search</label>-->
+			<input type="text" size="42" ng-model="search" class="form-control" placeholder="Search">
+		</div>
+	</form>
+	</div>
 		<div class="row row-flex">
-			<form class="navbar-form " >
-				<div class="form-group">
-<!--					<label >Search</label>-->
-					<input type="text" size="42" ng-model="search" class="form-control" placeholder="Search">
-				</div>
-			</form>
+
 			<div ng-repeat="product in products | filter:search" class="col-sm-6 col-md-4">
 				<div class="thumbnail">
 					<img ng-src="../public_html/image/cartridge/{{ product.productImageFileName }}"
