@@ -1,55 +1,30 @@
 <?php require_once("partials/head-utils.php") ?>
 
-<nav class="navbar navbar-default">
-	<div class="container-fluid">
-		<!-- Brand and toggle get grouped for better mobile display -->
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#">Brand</a>
-		</div>
+<div class="container">
 
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-				<li><a href="#">Link</a></li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-					<ul class="dropdown-menu">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="#">Separated link</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="#">One more separated link</a></li>
-					</ul>
-				</li>
-			</ul>
-			<form class="navbar-form navbar-left" role="search">
-				<div class="form-group">
-					<input type="text" class="form-control" placeholder="Search">
+	<div class="row">
+		<form name="addFeedbackForm" id="addFeedbackForm" class="form-horizontal well" ng-submit="createFeedback(newFeedback, addFeedbackForm.$valid);" uib-collapse="collapseAddForm" novalidate>
+			<h2>Submit Feedback</h2>
+			<hr />
+			<div class="form-group" ng-class="{ 'has-error': addFeedbackForm.addContent.$touched && addFeedbackForm.addContent.$invalid }">
+				<label for="addContent">Content</label>
+				<div class="input-group">
+					<div class="input-group-addon">
+						<i class="fa fa-quote-left" aria-hidden="true"></i>
+					</div>
+					<input type="text" name="addContent" id="addContent" class="form-control" maxlength="64" ng-model="newFeedback.messageContent" ng-minlength="1" ng-maxlength="64" ng-required="true" />
 				</div>
-				<button type="submit" class="btn btn-default">Submit</button>
-			</form>
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">Link</a></li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-					<ul class="dropdown-menu">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="#">Separated link</a></li>
-					</ul>
-				</li>
-			</ul>
-		</div><!-- /.navbar-collapse -->
-	</div><!-- /.container-fluid -->
-</nav>
+				<div class="alert alert-danger" role="alert" ng-messages="addFeedbackForm.addContent.$error" ng-if="addFeedbackForm.addContent.$touched" ng-hide="addFeedbackForm.addContent.$valid">
+					<p ng-message="required">Content is required.</p>
+					<p ng-message="minlength">Content cannot be empty.</p>
+					<p ng-message="maxlength">Content is too long.</p>
+				</div>
+			</div>
+
+			<button type="submit" class="btn btn-info btn-lg" ng-disabled="addFeedbackForm.$invalid"><i class="fa fa-share"></i> Feedback</button>
+			<button type="reset" class="btn btn-warning btn-lg"><i class="fa fa-ban"></i> Cancel</button>
+		</form>
+		<uib-alert ng-repeat="alert in alerts" type="{{ alert.type }}" close="alerts.length = 0;">{{ alert.msg }}</uib-alert>
+	</div>
+
+</div>

@@ -69,7 +69,7 @@
 				</div>
 			</div>
 
-			<button type="submit" class="btn btn-info btn-lg" ng-disabled="addProductForm.$invalid"><i class="fa fa-share"></i> Message</button>
+			<button type="submit" class="btn btn-info btn-lg" ng-disabled="addMessageForm.$invalid"><i class="fa fa-share"></i> Message</button>
 			<button type="reset" class="btn btn-warning btn-lg"><i class="fa fa-ban"></i> Cancel</button>
 		</form>
 		<uib-alert ng-repeat="alert in alerts" type="{{ alert.type }}" close="alerts.length = 0;">{{ alert.msg }}</uib-alert>
