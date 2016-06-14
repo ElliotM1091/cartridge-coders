@@ -15,7 +15,14 @@
 	padding: 100px;
 }
 
-
+.introcss {
+	background-color: black;
+	font-size: 100px;
+	font-family: Consolas, Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+	text-align: center;
+	color: #0971B2;
+	padding: 50px;
+}
 .profilecss {
 	background-color: #252925;
 	font-size: 18px;

@@ -21,10 +21,10 @@
 							<input type="hidden" name="business" value="cartridgecoders-buyer@gmail.com">
 							<!-- accoutPpEmail of productAccountId -->
 							<input type="hidden" name="lc" value="US">
-							<input type="hidden" name="item_name" value="Box Fan"> <!-- productDescription -->
-							<input type="hidden" name="item_number" value="2HOT"> <!-- productId -->
-							<input type="hidden" name="amount" value="200.00"> <!-- productPrice + productShipping -->
-							<input type="hidden" name="currency_code" value="MXN">
+							<input type="hidden" name="item_name" value="{{ product.productTitle }}"> <!-- productDescription -->
+							<input type="hidden" name="item_number" value="Cartridge"> <!-- productId -->
+							<input type="hidden" name="amount" value="{{ product.productPrice }}"> <!-- productPrice + productShipping -->
+							<input type="hidden" name="currency_code" value="USD">
 							<input type="hidden" name="button_subtype" value="services">
 							<input type="hidden" name="no_note" value="0">
 							<input type="hidden" name="cn" value="Add special instructions to the seller:">

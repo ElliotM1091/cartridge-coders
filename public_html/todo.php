@@ -1,29 +1,17 @@
+<?php require_once("php/partials/head-utils.php"); ?>
+<?php //require_once("php/partials/header.php"); ?>
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="stylesheet" href="css/style2.css" type="text/css">
 
 
-centralize - image angular
+<body>
+	<div class="container">
+		<div class="panel introcss">
+			<div class="row" align="center">
+				<p><a href="index.php">ROMuLess</a></p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
 
-centralize - EE's style
-
-footer
--twitter
--facetube
--donate button
-
-account page ++ display user product by productaccountId
-GET ALL PRODUCTS BY PRODUCT-ACCOUNT-ID
-Add a new product -> form to create a new product
-
-form to send a message
-
-form leave feedback
-
-menu bar function
-search function
-
-doing the session stuff for the header.
-
-need to do
-
-get search bar working.
-
-for presentation:
