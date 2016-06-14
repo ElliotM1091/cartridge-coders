@@ -22,7 +22,7 @@
 						<p>{{ product.productDescription }}</p>
 						<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
 							<input type="hidden" name="cmd" value="_xclick">
-							<input type="hidden" name="business" value="cartridgecoders-buyer@gmail.com">
+							<input type="hidden" name="business" value="SellerDemo@gmail.com">
 							<!-- accoutPpEmail of productAccountId -->
 							<input type="hidden" name="lc" value="US">
 							<input type="hidden" name="item_name" value="{{ product.productTitle }}"> <!-- productDescription -->
