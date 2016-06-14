@@ -31,9 +31,15 @@ $PREFIX = str_repeat("../", 3);
 						<button type="submit" class="btn btn-default">Search</button>
 					</form> -->
 <!--					other areas we can access-->
+
 					<div class="collapse navbar-collapse" id="main-nav">
 						<ul class="nav navbar-nav navbar-center">
-							<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Product <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="createProduct">Add Product</a></li>
+									<li><a href="#">Another action</a></li>
+								</ul>
 							<li><a href="createProduct">Create Product</a></li>
 							<li><a href="sendMessage">Send Message</a></li>
 							<li><a href="sendFeedback">Feedback</a></li>
