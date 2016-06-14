@@ -23,6 +23,8 @@
 			</div>
 		</div>
 
+
+		
 		<div ng-view></div>
 	</div>
 	<?php require_once("../php/partials/footer.php"); ?>
