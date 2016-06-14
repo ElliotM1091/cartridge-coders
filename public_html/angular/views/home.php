@@ -1,6 +1,6 @@
 
 <!-- contents -->
-<section id="feature" class="p-y-4" xmlns="http://www.w3.org/1999/html">
+<section id="feature" class="p-y-4" >
 	<div class="row">
 
 	<form class="navbar-form " >

@@ -3,7 +3,7 @@
 <!--	<search-misquote></search-misquote>
 </div>-->
 <div class="container">
-<div class="row">
+
 	<form name="addProductForm" id="addProductForm" class="form-horizontal well" ng-submit="createProduct(newProduct, addProductForm.$valid);" uib-collapse="collapseAddForm" novalidate>
 		<h2>Create Product</h2>
 		<hr />
