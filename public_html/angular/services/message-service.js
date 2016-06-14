@@ -1,7 +1,7 @@
 /**
  * Defines a constant which holds the base url of the API
  */
-app.constant("MESSAGE_ENDPOINT", "php/api/message/");
+app.constant("MESSAGE_ENDPOINT", "php/apis/message/");
 
 /**
  * Initializes our message service
