@@ -1,4 +1,3 @@
-<div class="container">
 	<form name="giveMessage" id="createMessage" class="form-horizontal well" ng-controller="messageController"
 			ng-submit="submit(formData,  giveMessage.$valid);" novalidate>
 		<div class="form-group"
@@ -34,4 +33,3 @@
 			<button class="btn btn-warning" type="reset"><i class="fa fa-ban"></i> Reset</button>
 		</div>
 	</form>
-</div>
