@@ -101,6 +101,7 @@ if (is_object($accounts) && (count(get_object_vars($accounts)) < 1)){
 	$account = Account::getAccountByAccountPpEmail($pdo, $accountPpEmail)[0];
 }
 
+
 ?>
 
 <!------------------------------------------ Set session variables -------------------------------------------->
