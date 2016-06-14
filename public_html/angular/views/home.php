@@ -2,10 +2,10 @@
 <!-- contents -->
 <section id="feature" class="p-y-4">
 		<div class="row row-flex">
-			<form class="form-inline">
+			<form class="navbar-form " >
 				<div class="form-group">
 <!--					<label >Search</label>-->
-					<input type="text" ng-model="search" class="form-control" placeholder="Search">
+					<input type="text" size="42" ng-model="search" class="form-control" placeholder="Search">
 				</div>
 			</form>
 			<div ng-repeat="product in products | filter:search" class="col-sm-6 col-md-4">

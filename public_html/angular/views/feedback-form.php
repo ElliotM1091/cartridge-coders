@@ -1,4 +1,5 @@
-
+<div class="row" ng-class="{ 'spacer': collapseAddForm }">
+	<button type="button" class="btn btn-lg btn-ingo" ng-click="collapseAddForm = !collapseAddForm"></button>
 		<form name="giveFeedback" id="createFeedback" class="form-horizontal well" ng-controller="feedbackController" ng-submit="submit(formData,  giveFeedback.$valid);" novalidate>
 			<div class="form-group" ng-class="{ 'has-error': createFeedback.senderId.$touched && createFeedback.senderId.$invalid }">
 				<label for="SenderId">SenderId</label>
@@ -12,6 +13,7 @@
 					<p ng-message="maxlength"> sorry senderId too long</p> <!-- delete this? -->
 					<p ng-message="required"> your forgot senderId go back and try again </p>  <!-- prob gonna delete this too?-->
 			</div>
+				</div>
 			<div name=class="form-group" ng-class="{ 'has-erorr': createFeedback.recipientId.$touched && createFeedback.recipientId.$invalid }">
 				<label for="recipientId">Recipient Id:</label>
 				<div class="input-group">
@@ -36,6 +38,7 @@
 					<p ng-message="maxlength"> sorry senderId too long</p>
 					<p ng-message="required"> your forgot senderId go back and try again </p>
 			</div>
+				</div>
 			<!--<div class="form-group" ng-class="{ 'has-error': createFeedback.rating.$touched && crateFeedback.feedbackRating.$invalid">
 				<label for="rating">Rating</label>
 				<div class="input-group">
@@ -60,6 +63,6 @@
 			</div>
 			<button class="btn btn-success" type="submit"><i class="fa fa-paper-plane"></i> Send</button>
 			<button class="btn btn-warning" type="reset"><i class="fa fa-ban"></i> Reset</button>
+				</div>
 		</form>
-	</body>
-</html>
+</div>
