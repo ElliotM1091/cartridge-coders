@@ -12,7 +12,7 @@
 					<div class="input-group-addon">
 						<i class="fa fa-quote-left" aria-hidden="true"></i>
 					</div>
-					<input type="text" name="addContent" id="addContent" class="form-control" maxlength="64" ng-model="newFeedback.messageContent" ng-minlength="1" ng-maxlength="64" ng-required="true" />
+					<input type="text" name="addContent" id="addContent" class="form-control" maxlength="64" ng-model="newFeedback.feedbackContent" ng-minlength="1" ng-maxlength="64" ng-required="true" />
 				</div>
 				<div class="alert alert-danger" role="alert" ng-messages="addFeedbackForm.addContent.$error" ng-if="addFeedbackForm.addContent.$touched" ng-hide="addFeedbackForm.addContent.$valid">
 					<p ng-message="required">Content is required.</p>

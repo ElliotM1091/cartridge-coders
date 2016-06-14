@@ -12,6 +12,9 @@
 	margin-bottom: 15px !important;
 }
 
+section#feature {
+	padding-bottom: 150px !important;
+}
 
 body {
 	/*background-image: url("../image/hd-wallpaper-29.jpg");*/
