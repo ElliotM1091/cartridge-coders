@@ -10,7 +10,7 @@ require_once("php/partials/head-utils.php"); ?>
 	<div class="sfooter">
 
 
-
+		<div class="container">
 
 			<!-- angular view directive -->
 			<div ng-view></div>
@@ -21,5 +21,7 @@ require_once("php/partials/head-utils.php"); ?>
 
 		<!-- footer -->
 		<?php require_once("php/partials/footer.php") ?>
+	</div>
+
 </body>
 </html>
