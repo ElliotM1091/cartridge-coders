@@ -11,7 +11,7 @@ app.config(function($routeProvider, $locationProvider) {
 		// route for the account page
 		.when('/profile', {
 			controller  : 'AccountProductController',
-			templateUrl : 'angular/views/account-products.php'
+			templateUrl : 'angular/views/profile.php'
 		})
 
 		// route for sending message

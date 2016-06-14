@@ -1,8 +1,6 @@
 <?php require_once("php/partials/head-utils.php"); ?>
 <link rel="stylesheet" href="css/style.css" type="text/css">
 <link rel="stylesheet" href="css/style2.css" type="text/css">
-
-
 <body>
 	<div><a href="index.php"><img src="image/bs.gif"></a></div>
 	<div class="container">

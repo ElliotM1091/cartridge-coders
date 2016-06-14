@@ -15,6 +15,22 @@ $PREFIX = str_repeat("../", 3);
 ?>
 <!-- header -->
 <header class="p-y-4">
+<!------------------------------------------------------------------------------------------------->
+	<!--if logged in "login" should be log out-->
+	<!--surpress create/send/feed back if not logged in-->
+	<!--nuke search-->
+
+	<!-- CHECK ACTIVE SESSION  -->
+<!--	--><?php
+//	if (isset($_SESSION["sessionaccountid"])) {
+//		echo "Session Active";
+//	} else {
+//		echo "Session Inactive";
+//	}
+//	?>
+	<!-- CHECK ACTIVE SESSION  -->
+
+
 	<div class="container">
 
 		<!-- brand and toggle  stuff-->
@@ -22,6 +38,7 @@ $PREFIX = str_repeat("../", 3);
 			<div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<a class="navbar-brand" href="index.html">ROMuLess</a>
+
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<form class="navbar-form navbar-left" role="search">
@@ -30,7 +47,7 @@ $PREFIX = str_repeat("../", 3);
 						</div>
 						<button type="submit" class="btn btn-default">Search</button>
 					</form>
-					other areas we can access
+<!--					other areas we can access-->
 
 					<div class="collapse navbar-collapse" id="main-nav">
 						<ul class="nav navbar-nav navbar-center">
@@ -43,6 +60,7 @@ $PREFIX = str_repeat("../", 3);
 							<li><a href="createProduct">Create Product</a></li>
 							<li><a href="sendMessage">Send Message</a></li>
 							<li><a href="sendFeedback">Feedback</a></li>
+
 							</ul>
 					</div>
 					<li class="nav navbar-nav navbar-right" ng-controller="PaypalController">
@@ -52,6 +70,8 @@ $PREFIX = str_repeat("../", 3);
 			</div><!-- /.container-fluid -->
 		</nav>
 	</div>
+<!--	---------------------------------------------------------------------------------------------->
+
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -91,3 +111,10 @@ $PREFIX = str_repeat("../", 3);
 		</div>
 	</div>
 </header>
+
+
+
+
+
+
+
