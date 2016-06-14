@@ -127,7 +127,7 @@ $_SESSION["sessionBearerToken"] = $accessTokenExtractToken;
 
 		<script type="text/javascript">
 			function leave() {
-				window.location = "profile.php";
+				window.location = "../angular/views/profile.php";
 			}
 			setTimeout("leave()", 2000);
 		</script>
