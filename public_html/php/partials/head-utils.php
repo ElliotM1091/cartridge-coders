@@ -77,7 +77,7 @@ setXsrfCookie();
 		<script type="text/javascript" src="angular/controllers/account-product-controller.js"></script>
 		<script type="text/javascript" src="angular/controllers/paypal-controller.js"></script>
 		<script type="text/javascript" src="angular/controllers/product-controller.js"></script>
-		<script type="text/javascript" src="angular/controllers/message-controller.js"></script>-
+		<script type="text/javascript" src="angular/controllers/message-controller.js"></script>
 
 		<title>ROMuLess</title>
 	</head>
