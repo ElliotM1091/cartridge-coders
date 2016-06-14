@@ -5,11 +5,10 @@
 
 
 <body>
-	<div><a href="index.php"><img src="image/bs.gif"></a> </div>
+	<div><a href="index.php"><img src="image/bs.gif"></a></div>
 	<div class="container">
 		<div class="panel introcss">
 			<div class="row" align="center">
-<!--				<p><a href="index.php">ROMuLess</a></p>-->
 				<p>ROMuLess</p>
 			</div>
 		</div>
