@@ -15,7 +15,7 @@ app.config(function($routeProvider, $locationProvider) {
 		})
 
 		// route for sending message
-		.when('/sendMessage/:productId', {
+		.when('/sendMessage', {
 			controller  : 'MessageController',
 			templateUrl : 'angular/views/message-form.php'
 		})

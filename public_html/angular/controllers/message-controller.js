@@ -1,6 +1,6 @@
 app.controller("MessageController", ["$routeParams", "$scope", "MessageService", function($routeParams, $scope, MessageService) {
 
-	$scope.newMessage = {messageId: null, messageSenderId: null, messageProductId: null, messageRecipientId: null, messageContent: "", messageMailGunId: null, messageSubject: ""};
+	$scope.newMessage = {messageId: null, messageSenderId: "1", messageProductId: "10", messageRecipientId: "5", messageContent: "", messageSubject: ""};
 	$scope.alerts = [];
 
 	/**
@@ -16,7 +16,7 @@ app.controller("MessageController", ["$routeParams", "$scope", "MessageService",
 				.then(function(result) {
 					if(result.data.status === 200) {
 						$scope.alerts[0] = {type: "success", msg: result.data.message};
-						$scope.newMessage = {messageId: null, messageSenderId: null, messageProductId: null, messageRecipientId: null, messageContent: "", messageMailGunId: null, messageSubject: ""};
+						$scope.newMessage = {messageId: null, messageSenderId: null, messageProductId: null, messageRecipientId: null, messageContent: "", messageSubject: ""};
 						$scope.addMessageForm.$setPristine();
 						$scope.addMessageForm.$setUntouched();
 					} else {
