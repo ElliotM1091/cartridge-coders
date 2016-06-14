@@ -1,57 +1,101 @@
 <?php
+use Edu\Cnm\CartridgeCoders;
+
+require_once dirname(__DIR__, 2) . "/classes/autoload.php";
+require_once dirname(__DIR__, 2) . "/lib/xsrf.php";
+require_once("/etc/apache2/capstone-mysql/encrypted-config.php");
 /**
- * Image uploader for Cartridge Coders capstone project
+ * api for image uploading
  *
- * @author Marlan Ball <wyndows@earthlink.net> adapted from code by Robin Nixon
- * @version 1.0.0
-**/
+ * @author Marlan Ball <wyndows@earthlink.net> based on code by Robin Nixon
+ **/
 
-if (isset($_FILES['image']['name']))
-{
-$saveto = "testing.jpg";
+// verify the session, start if not active
+if(session_status() !== PHP_SESSION_ACTIVE) {
+	session_start();
+}
+
+//prepare an empty reply
+$reply = new stdClass();
+$reply->status = 200;
+$reply->data = null;
+
+try {
+
+	//set XSRF cookie
+	setXsrfCookie();
+
+	// grab the mySQL connection
+	$pdo = connectToEncryptedMySQL("/etc/apache2/capstone-mysql/cartridge.ini");
+
+	//determine which HTTP method was used
+	$method = array_key_exists("HTTP_X_HTTP_METHOD", $_SERVER) ? $_SERVER["HTTP_X_HTTP_METHOD"] : $_SERVER["REQUEST_METHOD"];
+
+	if($method === "POST") {
+		verifyXsrf();
+
+		// create new Image and insert into the database
+		$image = new CartridgeCoders\Image(null, "temporaryFileName.jpg", "image/jpeg");
+		$image->insert($pdo);
+
+		// update reply
+		$reply->message = "Image created ok";
+		
+		
+
+if(isset($_FILES['image']['name'])) {
+	$tmpFileName = $_FILES['image']['tmp_name'];
 //move_uploaded_file($_FILES['image']['tmp_name'], $saveto);
-$typeok = TRUE;
+	$typeok = TRUE;
 
-switch($_FILES['image']['type'])
-{
-case "image/gif":   $src = imagecreatefromgif($saveto); break;
-case "image/jpeg":  // Both regular and progressive jpegs
-case "image/pjpeg": $src = imagecreatefromjpeg($saveto); break;
-case "image/png":   $src = imagecreatefrompng($saveto); break;
-default:            $typeok = FALSE; break;
-}
+	switch($_FILES['image']['type']) {
+		case "image/gif":
+			$src = imagecreatefromgif($tmpFileName);
+			break;
+		case "image/jpeg":  // Both regular and progressive jpegs
+		case "image/pjpeg":
+			$src = imagecreatefromjpeg($tmpFileName);
+			break;
+		case "image/png":
+			$src = imagecreatefrompng($tmpFileName);
+			break;
+		default:
+			$typeok = FALSE;
+			break;
+	}
 
-if ($typeok)
-{
-list($w, $h) = getimagesize($saveto);
+	if($typeok) {
+		// create an image object with a bad file name
+		// insert the image into the database
+		// rename the file name to be product-$productId
+		// update the image in the database
+		$saveto = "/var/www/html/public_html/cartridge-coders/product-$productId.jpg";
 
-$max = 100;
-$tw  = $w;
-$th  = $h;
 
-if ($w > $h && $max < $w)
-{
-$th = $max / $w * $h;
-$tw = $max;
-}
-elseif ($h > $w && $max < $h)
-{
-$tw = $max / $h * $w;
-$th = $max;
-}
-elseif ($max < $w)
-{
-$tw = $th = $max;
-}
+		list($w, $h) = getimagesize($saveto);
 
-$tmp = imagecreatetruecolor($tw, $th);
-imagecopyresampled($tmp, $src, 0, 0, 0, 0, $tw, $th, $w, $h);
-imageconvolution($tmp, array(array(-1, -1, -1),
-array(-1, 16, -1), array(-1, -1, -1)), 8, 0);
-imagejpeg($tmp, NULL);
-imagedestroy($tmp);
-imagedestroy($src);
-}
+		$max = 100;
+		$tw = $w;
+		$th = $h;
+
+		if($w > $h && $max < $w) {
+			$th = $max / $w * $h;
+			$tw = $max;
+		} elseif($h > $w && $max < $h) {
+			$tw = $max / $h * $w;
+			$th = $max;
+		} elseif($max < $w) {
+			$tw = $th = $max;
+		}
+
+		$tmp = imagecreatetruecolor($tw, $th);
+		imagecopyresampled($tmp, $src, 0, 0, 0, 0, $tw, $th, $w, $h);
+		imageconvolution($tmp, array(array(-1, -1, -1),
+			array(-1, 16, -1), array(-1, -1, -1)), 8, 0);
+		imagejpeg($tmp, $image->getImageFileName());
+		imagedestroy($tmp);
+		imagedestroy($src);
+	}
 }
 
 //showProfile($user);
@@ -65,10 +109,10 @@ echo <<<_END
   </head>
   <body>
    <form method='post' action='index.php' enctype='multipart/form-data'>
-	<h3>upload an image</h3>
+	<h3>Upload an Image</h3>
 	<br> 
 	Image: <input type='file' name='image' size='14'>
-	<input type='submit' value='Save Profile'>
+	<input type='submit' value='Save Image'>
 </form>
   </body>
 </html>
