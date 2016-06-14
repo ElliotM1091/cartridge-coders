@@ -47,19 +47,6 @@ app.service("FeedbackService", function($http, FEEDBACK_ENDPOINT) {
 	};
 
 	/**
-	 * GET feedback by feedback Sender id
-	 **/
-	this.fetchByFeedbackSenderId = function(feedbackSenderId) {
-		return($http.get(getUrl() + "?feedbackSenderId=" + feedbackSenderId));
-	};
-
-	/**
-	 * GET feedback by feedback recipient id
-	 **/
-	this.fetchByFeedbackRecipientId = function(feedbackRecipientId) {
-		returne($http.get(getUrl() + "?feedbackRecipientId=" + feedbackRecipientId));
-	};
-	/**
 	 * POSTS feedback
 	 */
 	this.create = function(feedback) {

@@ -1,6 +1,6 @@
 app.controller("FeedbackController", ["$routeParams", "$scope", "FeedbackService", function($routeParams, $scope, FeedbackService) {
 
-	$scope.newFeedback = {feedbackId: null, feedbackSenderId: "1", feedbackProductId: "10", feedbackRecipientId: "5", feedbackContent: "", feedbackRating: ""};
+	$scope.newFeedback = {feedbackId: null, feedbackSenderId: "1", feedbackProductId: "10", feedbackRecipientId: "5", feedbackContent: "", feedbackRating: "5"};
 	$scope.alerts = [];
 
 	/**
