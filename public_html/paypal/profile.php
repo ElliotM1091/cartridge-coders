@@ -1,5 +1,5 @@
 <?php require_once("../php/partials/head-utils.php"); ?>
-<?php require_once("../php/partials/header.php"); ?>
+<?php require_once("../php/partials/header-logged-in.php"); ?>
 <link rel="stylesheet" href="../css/style.css" type="text/css">
 <link rel="stylesheet" href="../css/style2.css" type="text/css">
 
