@@ -14,7 +14,7 @@ app.config(function($routeProvider, $locationProvider) {
 			templateUrl : 'angular/views/account-products.php'
 		})
 
-		// route for the sending message
+		// route for sending message
 		.when('/sendMessage/:productId', {
 			controller  : 'MessageController',
 			templateUrl : 'angular/views/message-form.php'
@@ -26,7 +26,7 @@ app.config(function($routeProvider, $locationProvider) {
 			templateUrl : 'angular/views/product-form.php'
 		})
 
-		// route for the sending feedback
+		// route for sending feedback
 		.when('/sendFeedback', {
 			controller  : 'FeedbackController',
 			templateUrl : 'angular/views/feedback-form.php'

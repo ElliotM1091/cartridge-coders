@@ -1,6 +1,6 @@
 app.controller("ProductController", ["$routeParams", "$scope", "ProductService", function($routeParams, $scope, ProductService) {
 
-	$scope.newProduct = {productId: null, productAccountId: null, productImageId: null, productAdminFee: 0, productDescription: "", productPrice: null, productShipping: null, productSold: 0, productTitle: ""};
+	$scope.newProduct = {productId: null, productAccountId: null, productImageId: null, productAdminFee: null, productDescription: "", productPrice: null, productShipping: null, productSold: null, productTitle: ""};
 	$scope.alerts = [];
 
 	/**
@@ -16,7 +16,7 @@ app.controller("ProductController", ["$routeParams", "$scope", "ProductService",
 					.then(function(result) {
 						if(result.data.status === 200) {
 							$scope.alerts[0] = {type: "success", msg: result.data.message};
-							$scope.newProduct = {productId: null, productAccountId: null, productImageId: null, productAdminFee: 0, productDescription: "", productPrice: null, productShipping: null, productSold: 0, productTitle: ""};
+							$scope.newProduct = {productId: null, productAccountId: null, productImageId: null, productAdminFee: null, productDescription: "", productPrice: null, productShipping: null, productSold: null, productTitle: ""};
 							$scope.addProductForm.$setPristine();
 							$scope.addProductForm.$setUntouched();
 						} else {

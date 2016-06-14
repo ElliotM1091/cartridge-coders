@@ -1,83 +1,74 @@
-<div class="container">
-	<form name="createProduct" id="createProduct" class="form-horizontal well" ng-controller="ProductController"
-			ng-submit="submit(formData, createProduct.$valid);" novalidate>
-		<h3>Create Product</h3>
-		<div class="form-group"
-			  ng-class="{ 'has-error': createProduct.productTitle.$touched && createProduct.productTitle.$invalid }">
-			<label for="productTitle">Product Title</label>
+<div class="row" ng-class="{ 'spacer': collapseAddForm }">
+	<button type="button" class="btn btn-lg btn-info" ng-click="collapseAddForm = !collapseAddForm"><i class="fa fa-plus"></i> Add Product</button>
+<!--	<search-misquote></search-misquote>-->
+</div>
+<div class="row">
+	<form name="addProductForm" id="addProductForm" class="form-horizontal well" ng-submit="createProduct(newProduct, addProductForm.$valid);" uib-collapse="collapseAddForm" novalidate>
+		<h2>Create Product</h2>
+		<hr />
+		<div class="form-group" ng-class="{ 'has-error': addProductForm.addTitle.$touched && addProductForm.addTitle.$invalid }">
+			<label for="addTitle">Title</label>
 			<div class="input-group">
 				<div class="input-group-addon">
-					<i class="fa fa-user"></i>
+					<i class="fa fa-comment" aria-hidden="true"></i>
 				</div>
-				<input type="text" id="productTitle" name="productTitle" class="form-control"
-						 ng-model="createProduct.productTitle" ng-minlength="4" ng-maxlength="64" ng-required="true"/>
+				<input type="text" name="addTitle" id="addTitle" class="form-control" maxlength="255" ng-model="newProduct.productTitle" ng-minlength="1" ng-maxlength="255" ng-required="true" />
 			</div>
-			<div class="alert alert-danger" role="alert" ng-messages="createProduct.productTitle.$error"
-				  ng-if="createProduct.productTitle.$touched" ng-hide="createProduct.productTitle.$valid">
-				<p ng-message="minlength">Product title is too short.</p>
-				<p ng-message="maxlength">Product title is too long.</p>
-				<p ng-message="required">Please enter a product title.</p>
+			<div class="alert alert-danger" role="alert" ng-messages="addProductForm.addTitle.$error" ng-if="addProductForm.addTitle.$touched" ng-hide="addProductForm.addTitle.$valid">
+				<p ng-message="required">Title is required.</p>
+				<p ng-message="minlength">Title cannot be empty.</p>
+				<p ng-message="maxlength">Title is too long.</p>
 			</div>
 		</div>
-
-		<div class="form-group"
-			  ng-class="{ 'has-error': createProduct.productDescription.$touched && createProduct.productDescription.$invalid }">
-			<label for="productDescription">Product Description</label>
+		<div class="form-group" ng-class="{ 'has-error': addProductForm.addDescription.$touched && addProductForm.addDescription.$invalid }">
+			<label for="addDescription">Description</label>
 			<div class="input-group">
 				<div class="input-group-addon">
-					<i class="fa fa-user"></i>
+					<i class="fa fa-quote-left" aria-hidden="true"></i>
 				</div>
-				<input type="text" id="productDescription" name="productDescription" class="form-control"
-						 ng-model="createProduct.productDescription" ng-minlength="4" ng-maxlength="255" ng-required="true"/>
+				<input type="text" name="addDescription" id="addDescription" class="form-control" maxlength="64" ng-model="newProduct.productDescription" ng-minlength="1" ng-maxlength="64" ng-required="true" />
 			</div>
-			<div class="alert alert-danger" role="alert" ng-messages="createProduct.productDescription.$error"
-				  ng-if="createProduct.productDescription.$touched" ng-hide="createProduct.productDescription.$valid">
-				<p ng-message="minlength">Product description is too short.</p>
-				<p ng-message="maxlength">Product description is too long.</p>
-				<p ng-message="required">Please enter a product description.</p>
+			<div class="alert alert-danger" role="alert" ng-messages="addProductForm.addDescription.$error" ng-if="addProductForm.addDescription.$touched" ng-hide="addProductForm.addDescription.$valid">
+				<p ng-message="required">Description is required.</p>
+				<p ng-message="minlength">Description cannot be empty.</p>
+				<p ng-message="maxlength">Description is too long.</p>
 			</div>
 		</div>
-
-		<div class="form-group"
-			  ng-class="{ 'has-error': createProduct.productPrice.$touched && createProduct.productPrice.$invalid }">
-			<label for="productPrice">Product Price</label>
+		<div class="form-group" ng-class="{ 'has-error': addProductForm.addPrice.$touched && addProductForm.addPrice.$invalid }">
+			<label for="addPrice">Price</label>
 			<div class="input-group">
 				<div class="input-group-addon">
-					<i class="fa fa-user"></i>
+					<i class="fa fa-user" aria-hidden="true"></i>
 				</div>
-				<input type="text" id="productPrice" name="productPrice" class="form-control"
-						 ng-model="createProduct.productPrice" ng-min="0" ng-max="999999" ng-required="true"/>
+				<input type="text" name="addPrice" id="addPrice" class="form-control" maxlength="64" ng-model="newProduct.productPrice" ng-minlength="1" ng-maxlength="64" ng-required="true" />
 			</div>
-			<div class="alert alert-danger" role="alert" ng-messages="createProduct.productPrice.$error"
-				  ng-if="createProduct.productPrice.$touched" ng-hide="createProduct.productPrice.$valid">
-				<p ng-message="min">Product price is too low.</p>
-				<p ng-message="max">Product price is too high.</p>
-				<p ng-message="required">Please enter product price.</p>
+			<div class="alert alert-danger" role="alert" ng-messages="addProductForm.addPrice.$error" ng-if="addProductForm.addPrice.$touched" ng-hide="addProductForm.addPrice.$valid">
+				<p ng-message="required">Price is required.</p>
+				<p ng-message="minlength">Price cannot be empty.</p>
+				<p ng-message="maxlength">Price is too big.</p>
 			</div>
 		</div>
-
-		<div class="form-group"
-			  ng-class="{ 'has-error': createProduct.productShipping.$touched && createProduct.productShipping.$invalid }">
-			<label for="productShipping">Product Shipping</label>
+		<div class="form-group" ng-class="{ 'has-error': addProductForm.addShipping.$touched && addProductForm.addShipping.$invalid }">
+			<label for="addShipping">Shipping</label>
 			<div class="input-group">
 				<div class="input-group-addon">
-					<i class="fa fa-user"></i>
+					<i class="fa fa-user" aria-hidden="true"></i>
 				</div>
-				<input type="text" id="productShipping" name="productShipping" class="form-control"
-						 ng-model="createProduct.productShipping"  ng-min="0" ng-required="true"/>
-				ng-max="9999"		</div>
-			<div class="alert alert-danger" role="alert" ng-messages="createProduct.productShipping.$error"
-				  ng-if="createProduct.productShipping.$touched" ng-hide="createProduct.productShipping.$valid">
-								<p ng-message="min">Product shipping is too low.</p>
-				<p ng-message="max">Product shipping is too high.</p>
-				<p ng-message="required">Please enter product shipping.</p>
+				<input type="text" name="addShipping" id="addShipping" class="form-control" maxlength="64" ng-model="newProduct.productShipping" ng-minlength="1" ng-maxlength="64" ng-required="true" />
+			</div>
+			<div class="alert alert-danger" role="alert" ng-messages="addProductForm.addShipping.$error" ng-if="addProductForm.addShipping.$touched" ng-hide="addProductForm.addShipping.$valid">
+				<p ng-message="required">Shipping is required.</p>
+				<p ng-message="minlength">Shipping cannot be empty.</p>
+				<p ng-message="maxlength">Shipping is too big.</p>
 			</div>
 		</div>
-
-		<h5>Product Form Data</h5>
-		<p ng-show="createProduct.$valid"><em>Form data is valid!</em></p>
-		<p ng-hide="createProduct.$valid"><em>Form data is invalid!</em></p>
-		<pre></pre>
-		<uib-alert ng-repeat="alert in alerts" type="" close="alerts.length = 0;"></uib-alert>
+		<input type="text" name="addAccount" id="addAccount"  class="form-control" ng-model="newProduct.productAccountId" />
+		<input type="text" name="addImage" id="addImage"  class="form-control" ng-model="newProduct.productImageId" />
+		<input type="text" name="addAccount" id="addAccount"  class="form-control" ng-model="newProduct.productAdminFee" />
+		<input type="text" name="addImage" id="addImage"  class="form-control" ng-model="newProduct.productSold" />
+		
+		<button type="submit" class="btn btn-info btn-lg" ng-disabled="addProductForm.$invalid"><i class="fa fa-share"></i> Product</button>
+		<button type="reset" class="btn btn-warning btn-lg"><i class="fa fa-ban"></i> Cancel</button>
 	</form>
+	<uib-alert ng-repeat="alert in alerts" type="{{ alert.type }}" close="alerts.length = 0;">{{ alert.msg }}</uib-alert>
 </div>
