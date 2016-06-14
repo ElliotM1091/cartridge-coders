@@ -46,7 +46,7 @@ $PREFIX = str_repeat("../", 3);
 							</ul>
 					</div>
 					<li class="nav navbar-nav navbar-right" ng-controller="PaypalController">
-						<a ng-click="loadPaypal();">Login <i class="fa fa-user fa-2x" aria-hidden="true"></i></a>
+						<a ng-click="loadPaypal();">Login&#160;&#160;&#160;<i class="fa fa-user fa-2x" aria-hidden="true"></i></a>
 					</li>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
