@@ -23,28 +23,28 @@ $PREFIX = str_repeat("../", 3);
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<a class="navbar-brand" href="index.html">ROMuLess</a>
 				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><!--
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<form class="navbar-form navbar-left" role="search">
 						<div class="form-group">
 							<input type="text" size="15" class="form-control" placeholder="">
 						</div>
 						<button type="submit" class="btn btn-default">Search</button>
-					</form> -->
-<!--					other areas we can access-->
+					</form>
+					other areas we can access
 
-<!--					<div class="collapse navbar-collapse" id="main-nav">-->
-<!--						<ul class="nav navbar-nav navbar-center">-->
-<!--							<li class="dropdown">-->
-<!--								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Product <span class="caret"></span></a>-->
-<!--								<ul class="dropdown-menu">-->
-<!--									<li><a href="createProduct">Add Product</a></li>-->
-<!--									<li><a href="#">Another action</a></li>-->
-<!--								</ul>-->
-<!--							<li><a href="createProduct">Create Product</a></li>-->
-<!--							<li><a href="sendMessage">Send Message</a></li>-->
-<!--							<li><a href="sendFeedback">Feedback</a></li>-->
-<!--							</ul>-->
-<!--					</div>-->
+					<div class="collapse navbar-collapse" id="main-nav">
+						<ul class="nav navbar-nav navbar-center">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Product <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="createProduct">Add Product</a></li>
+									<li><a href="#">Another action</a></li>
+								</ul>
+							<li><a href="createProduct">Create Product</a></li>
+							<li><a href="sendMessage">Send Message</a></li>
+							<li><a href="sendFeedback">Feedback</a></li>
+							</ul>
+					</div>
 					<li class="nav navbar-nav navbar-right" ng-controller="PaypalController">
 						<a ng-click="loadPaypal();">Login&#160;&#160;&#160;<i class="fa fa-user fa-2x" aria-hidden="true"></i></a>
 					</li>
