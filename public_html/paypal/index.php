@@ -1,3 +1,10 @@
+<?php
+/*grab current directory*/
+$CURRENT_DIR = __DIR__;
+/*set page title here*/
+$PAGE_TITLE = "MY PAGE TITLE";
+?>
+
 <?php require_once("../php/partials/head-utils.php"); ?>
 <?php require_once("../php/partials/header.php"); ?>
 <link rel="stylesheet" href="../css/style.css" type="text/css">
@@ -16,7 +23,7 @@
 				<div class="row" align="center">
 					<p><br><a
 							href="https://www.sandbox.paypal.com/webapps/auth/protocol/openidconnect/v1/authorize?client_id=AWoiHG8w-yaeYyODSBIzJ-awWkLVPo7G9zWJMomAFeMTVw5wyRG_b2pyYxl7a7wB7ByjVLJ0aQ6FdVDj&response_type=code&scope=openid email profile&redirect_uri=https://bootcamp-coders.cnm.edu/~ddeleeuw/cartridge-coders/public_html/paypal/account.php"><img
-								src="../image/paypal-login.png"></img></a><br><br></p>
+								src="../image/paypal-login.png"></a><br><br></p>
 				</div>
 				<div class="row" align="justify">
 					<p>As well, logging in with PayPal will allow you to view your own cartridges for sale, add new

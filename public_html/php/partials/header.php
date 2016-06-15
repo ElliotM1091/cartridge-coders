@@ -18,12 +18,12 @@ $PREFIX = str_repeat("../", 3);
 	<div class="container">
 		<!------------------------------------------------------------------------------------------------->
 		<nav class="navbar navbar-inverse">
-		<div class="container-fluid">
+			<div class="container-fluid">
 				<div class="row topbarcss" align="left">
 					<div class="col-md-5"><a href="index.php"><h1>ROMuLess</h1></a></div>
 					<div class="col-md-6"><?php if(isset($_SESSION["sessionaccountid"])) {
 							echo '
-						<p><br><br><a href="createProduct">Create Product |</a><a href="sendMessage"> Send Message |</a><a href="sendFeedback"> Feedback |</a><a href="/angular/views/profile.php"> Account</a></li>
+						<p><br><br><a href="createProduct">Create Product |</a><a href="sendMessage"> Send Message |</a><a href="sendFeedback"> Feedback |</a><a href="profile"> Account</a></li>
 						</p>';
 						} else {
 							echo "";
@@ -33,9 +33,9 @@ $PREFIX = str_repeat("../", 3);
 					<div class="col-md-1" ng-controller="PaypalController">
 						<?php if(isset($_SESSION["sessionaccountid"])) {
 //						if is logged in
-							echo '
-						<a ng-click="session_destroy();"><i class="fa fa-user fa-3x"></i><br>Log out</a>
-						';
+							?>
+							<a ng-click="logOut();"><i class="fa fa-user fa-3x"></i><br>Log out</a>
+							<?php
 //						if is logged in
 						} else {
 //						if is not logged in
@@ -48,11 +48,10 @@ $PREFIX = str_repeat("../", 3);
 					</div>
 
 
-
 				</div>
 			</div>
 		</nav>
-		</div>
+	</div>
 	</div>
 	<!--	---------------------------------------------------------------------------------------------->
 

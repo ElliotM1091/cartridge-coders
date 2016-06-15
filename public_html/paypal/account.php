@@ -1,4 +1,10 @@
 <?php
+/*grab current directory*/
+$CURRENT_DIR = __DIR__;
+/*set page title here*/
+$PAGE_TITLE = "MY PAGE TITLE";
+?>
+<?php
 //// set XSRF cookie
 //require_once dirname(__DIR__) . "/php/lib/xsrf.php";
 //if(session_status() !== PHP_SESSION_ACTIVE) {

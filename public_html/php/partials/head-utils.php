@@ -4,6 +4,19 @@ if(session_status() !== PHP_SESSION_ACTIVE) {
 	session_start();
 }
 setXsrfCookie();
+
+/**
+ * Get the relative path.
+ * @see https://raw.githubusercontent.com/kingscreations/farm-to-you/master/php/lib/_header.php FarmToYou Header
+ **/
+
+// include the appropriate number of dirname() functions
+// on line 8 to correctly resolve your directory's path
+require_once(dirname(dirname(__DIR__)) . "/root-path.php");
+$CURRENT_DEPTH = substr_count($CURRENT_DIR, "/");
+$ROOT_DEPTH = substr_count($ROOT_PATH, "/");
+$DEPTH_DIFFERENCE = $CURRENT_DEPTH - $ROOT_DEPTH;
+$PREFIX = str_repeat("../", $DEPTH_DIFFERENCE);
 ?>
 <!DOCTYPE html> <!--this is the doctype declaration-->
 <html lang="en" ng-app="RomULess">
@@ -37,11 +50,14 @@ setXsrfCookie();
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
 		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+				  integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+				  crossorigin="anonymous"></script>
 
 
 		<!--custom CSS-->
-		<link rel="stylesheet" href="css/style2.css" type="text/css" media="">
+<!--		<link rel="stylesheet" href="--><?php //echo $PREFIX; ?><!--css/style.css" type="text/css">-->
+		<link rel="stylesheet" href="<?php echo $PREFIX; ?>css/style2.css" type="text/css">
 
 		<!-- jQuery (needed for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -52,16 +68,17 @@ setXsrfCookie();
 				  crossorigin="anonymous"></script>
 
 		<!--		Angular JS Libraries-->
-		<?php $ANGULAR_VERSION = "1.5.6";?>
+		<?php $ANGULAR_VERSION = "1.5.6"; ?>
 		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/
-		<?php echo $ANGULAR_VERSION;?>/angular.min.js"></script>
+		<?php echo $ANGULAR_VERSION; ?>/angular.min.js"></script>
 		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/
-		<?php echo $ANGULAR_VERSION;?>/angular-messages.min.js"></script>
+		<?php echo $ANGULAR_VERSION; ?>/angular-messages.min.js"></script>
 		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/
-		<?php echo $ANGULAR_VERSION;?>/angular-route.js"></script>
+		<?php echo $ANGULAR_VERSION; ?>/angular-route.js"></script>
 		<!--				<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/-->
 		<!--		--><?php //echo $ANGULAR_VERSION;?><!--/angular-animate.js"></script>-->
-		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.3/ui-bootstrap-tpls.min.js"></script>
+		<script type="text/javascript"
+				  src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.3/ui-bootstrap-tpls.min.js"></script>
 
 
 		<!--Angular app files (order: app, services, directives, controllers)-->
@@ -72,6 +89,7 @@ setXsrfCookie();
 		<script type="text/javascript" src="angular/services/product-image-service.js"></script>
 		<script type="text/javascript" src="angular/services/message-service.js"></script>
 		<script type="text/javascript" src="angular/services/image-upload-service.js"></script>
+		<script type="text/javascript" src="angular/services/logout-service.js"></script>
 		<script type="text/javascript" src="angular/controllers/home-controller.js"></script>
 		<script type="text/javascript" src="angular/controllers/account-product-controller.js"></script>
 		<script type="text/javascript" src="angular/controllers/paypal-controller.js"></script>
