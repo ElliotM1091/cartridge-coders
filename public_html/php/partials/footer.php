@@ -1,10 +1,10 @@
 <div class="container">
 <footer class="navbar-fixed-bottom">
+
 	<div class="foot-content">
 
 		<div class="navbar-inverse container">
 			<!--footer links/content-->
-			<div class="row">
 				<div class="col-md-6 visible-md-block visible-lg-block footer-brand">
 					<div>
 						<a rel="license" href="&lt;/a&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;p&gt;&lt;small&gt;&lt;em&gt;All content is licensed under &lt;a rel=" license"="" http:="" www.apache.org="" licenses="" license-2.0"="" target="_blank">All source code
