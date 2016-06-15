@@ -71,6 +71,7 @@ setXsrfCookie();
 		<script type="text/javascript" src="angular/services/image-service.js"></script>
 		<script type="text/javascript" src="angular/services/product-image-service.js"></script>
 		<script type="text/javascript" src="angular/services/message-service.js"></script>
+		<script type="text/javascript" src="angular/services/image-upload-service.js"></script>
 		<script type="text/javascript" src="angular/controllers/home-controller.js"></script>
 		<script type="text/javascript" src="angular/controllers/account-product-controller.js"></script>
 		<script type="text/javascript" src="angular/controllers/paypal-controller.js"></script>

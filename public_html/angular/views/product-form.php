@@ -62,6 +62,19 @@
 				<p ng-message="maxlength">Shipping is too big.</p>
 			</div>
 		</div>
+
+<!--				<form method='post' action='index.php' enctype='multipart/form-data'>-->
+					<h3>Upload an Image</h3>
+					<input type='file' name='image' size='14' >
+					<input type='submit' value='Save Image' ng-change="uploadImage()" ng-model="imageUploadYN" >
+<!--				</form>-->
+
+<!--		ng-model="imageUpload"-->
+
+
+
+		<br><br>
+
 <!--		<div ng-init="newProduct.productAccountId='10'"></div>-->
 <!--		<div ng-hide="newProduct.productSold" ng-hide="newProduct.productAccountId" ng-hide="newProduct.productImageId" ng-hide="newProduct.productAdminFee">-->
 <!--		<input type="text" name="addAccount" id="addAccount"  class="form-control" ng-model="newProduct.productAccountId" ng-init="newProduct.productAccountId='10'"/>-->

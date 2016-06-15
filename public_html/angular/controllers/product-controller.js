@@ -1,7 +1,18 @@
-app.controller("ProductController", ["$routeParams", "$scope", "ProductService", function($routeParams, $scope, ProductService) {
+app.controller("ProductController", ["$routeParams", "$scope", "ProductService", "ImageUploadService", function($routeParams, $scope, ProductService, ImageUploadService) {
 
-	$scope.newProduct = {productId: null, productAccountId: "5", productImageId: "16", productAdminFee: "0", productDescription: "", productPrice: null, productShipping: null, productSold: "0", productTitle: ""};
+	$scope.newProduct = {productId: null, productAccountId: "5", productImageId: null, productAdminFee: "0", productDescription: "", productPrice: null, productShipping: null, productSold: "0", productTitle: ""};
 	$scope.alerts = [];
+	$scope.imageUploadYN = 'false';
+	
+	$scope.uploadImage = function() {
+		ImageUploadService.create()
+			.then(function(result) {
+				if(result.data.status === 200) {
+					$scope.alerts[0] = {type: "success", msg: result.data.message};
+					$scope.newProduct.productImageId = result.data.data;
+				}
+			})
+	};
 
 	/**
 	 * creates a product and sends it to the product API
@@ -11,6 +22,7 @@ app.controller("ProductController", ["$routeParams", "$scope", "ProductService",
 	 **/
 
 		$scope.createProduct = function(product, validated) {
+			
 			if(validated === true) {
 				ProductService.create(product)
 					.then(function(result) {

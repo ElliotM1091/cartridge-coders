@@ -32,6 +32,12 @@ app.config(function($routeProvider, $locationProvider) {
 			templateUrl : 'angular/views/feedback-form.php'
 		})
 
+		// route for uploading image
+		.when('/uploadImage', {
+			controller  : 'ProductController',
+			templateUrl : 'angular/views/upload-image.php'
+		})
+
 		// otherwise redirect to home
 		.otherwise({
 			redirectTo: "/"
