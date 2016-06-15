@@ -57,7 +57,6 @@
 	</form>
 	</div>
 		<div class="row row-flex">
-
 			<div ng-repeat="product in products | filter:search" class="col-sm-6 col-md-4">
 				<div class="thumbnail">
 					<img ng-src="../public_html/image/cartridge/{{ product.productImageFileName }}"
@@ -66,6 +65,7 @@
 						<h3>{{ product.productTitle }}</h3>
 						<p>{{ product.productPrice }}</p>
 						<p>{{ product.productDescription }}</p>
+						<div>
 						<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
 							<input type="hidden" name="cmd" value="_xclick">
 							<input type="hidden" name="business" value="SellerDemo@gmail.com">
@@ -90,6 +90,9 @@
 							<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1"
 								  height="1">
 						</form>
+						<a class="btn btn-primary" href="sendMessage">Message Seller </a>
+						<div class="clearfix"></div>
+						</div>
 					</div>
 				</div>
 			</div>
