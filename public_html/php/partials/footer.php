@@ -1,6 +1,7 @@
+<div class="container">
 <footer class="navbar-fixed-bottom">
-	<div class="container">
 	<div class="foot-content">
+
 		<div class="navbar-inverse container">
 			<!--footer links/content-->
 			<div class="row">
@@ -26,5 +27,5 @@
 			</div><!--.row-->
 		</div>
 	</div>
-	</div>
 </footer>
+</div>
