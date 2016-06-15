@@ -82,7 +82,7 @@ $PAGE_TITLE = "MY PAGE TITLE";
 														height="200" width="200"></div>
 					<div class="col-md-8"><strong>TITLE:</strong> Turok<br><br><strong>PRICE:</strong> 49.99<br><br><strong>SHIPPING:</strong> 2.99<br><br><strong>DESCRIPTION:</strong>
 						Turok is an adaptation of the Acclaim Comics comic book series of the same name. The player controls a Native American warrior, Turok, who must stop the evil Campaigner from conquering the universe with an ancient and powerful weapon.</div>
-					<div class="col-md-1"><i class="fa fa-trash fa-2x"></i><br>Delete<br><br><i class="fa fa-pencil fa-2x"></i><br>SOLD WILL BE HERE</div>
+					<div class="col-md-1"><i class="fa fa-trash fa-2x"></i><br>Delete<br><br><i class="fa fa-usd fa-2x"></i><br>SOLD</div>
 				</div>
 			</div>
 
