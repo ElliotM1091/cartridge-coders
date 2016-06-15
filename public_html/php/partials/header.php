@@ -14,17 +14,17 @@
 $PREFIX = str_repeat("../", 3);
 ?>
 <!-- header -->
-<header class="p-y-4">
+<header class="topbarcss">
 <!------------------------------------------------------------------------------------------------->
-	<div class="container">
-		<div class="panel topbarcss">
-			<div class="row">
-				<div class="col-md-5"><a href="index.php">ROMuLess</a></div>
+	<div class="container" style="background-color: black">
+		<div class="panel topbarcss" style="background-color: black">
+			<div class="row topbarcss" align="center">
+				<div class="col-md-5"><a href="index.php"><h1>ROMuLess</h1></a></div>
 
 
 
 
-				<div class="col-md-5"><?php if (isset($_SESSION["sessionaccountid"])) {
+				<div class="col-md-6"><?php if (isset($_SESSION["sessionaccountid"])) {
 						echo "Logout";
 					} else {
 						echo "Login";
@@ -36,19 +36,17 @@ $PREFIX = str_repeat("../", 3);
 
 
 
-				<div class="col-md-2" ng-controller="PaypalController">
+				<div class="col-md-1" ng-controller="PaypalController">
 					<?php if (isset($_SESSION["sessionaccountid"])) {
 //						if is logged in
 						echo "Logout";
 //						if is logged in
 					} else {
 //						if is not logged in
-						?>
-						<a ng-click="loadPaypal();">Login&#160;&#160;&#160;<i class="fa fa-user fa-2x" aria-hidden="true"></i></a>
+						echo'
+						<a ng-click="loadPaypal();"><i class="fa fa-user fa-3x"></i><br>Login</a>
 					</li>
-
-
-						<?php;
+						';
 //						if is not logged in
 					}
 					?>
