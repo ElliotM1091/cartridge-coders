@@ -18,12 +18,13 @@
 
 .topbarcss {
 	background: black;
-	background-color: black;
+	/*background-color: black;*/
 	font-size: 18px;
 	font-family: Consolas, Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
 	text-align: center;
 	color: dodgerblue;
-	padding: 100px;
+	/*padding: 200px;*/
+	/*margin: 100px;*/
 }
 
 

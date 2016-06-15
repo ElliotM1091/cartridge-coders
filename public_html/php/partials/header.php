@@ -18,16 +18,19 @@ $PREFIX = str_repeat("../", 3);
 <!------------------------------------------------------------------------------------------------->
 	<div class="container" style="background-color: black">
 		<div class="panel topbarcss" style="background-color: black">
-			<div class="row topbarcss" align="center">
+			<div class="row topbarcss" align="left">
 				<div class="col-md-5"><a href="index.php"><h1>ROMuLess</h1></a></div>
 
 
 
 
 				<div class="col-md-6"><?php if (isset($_SESSION["sessionaccountid"])) {
-						echo "Logout";
+						echo'
+						<p><br><br><a href="createProduct">Create Product </a>|<a href="sendMessage"> Send Message </a>|<a href="sendFeedback"> Feedback</a></li>
+						</p>';
 					} else {
-						echo "Login";
+						echo "";
+
 					}
 					?>
 				</div>
@@ -39,13 +42,14 @@ $PREFIX = str_repeat("../", 3);
 				<div class="col-md-1" ng-controller="PaypalController">
 					<?php if (isset($_SESSION["sessionaccountid"])) {
 //						if is logged in
-						echo "Logout";
+						echo'
+						<a ng-click="session_destroy();"><i class="fa fa-user fa-3x"></i><br>Log out</a>
+						';
 //						if is logged in
 					} else {
 //						if is not logged in
 						echo'
 						<a ng-click="loadPaypal();"><i class="fa fa-user fa-3x"></i><br>Login</a>
-					</li>
 						';
 //						if is not logged in
 					}
