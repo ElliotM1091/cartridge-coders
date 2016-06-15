@@ -2,7 +2,7 @@
 <!-- contents -->
 
 
-<div class="container">
+
 	<div class="row">
 		<div class="col-md-12">
 			<div class="btn-group btn-group-justified " role="group" aria-label="...">
@@ -39,7 +39,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+
 
 
 
