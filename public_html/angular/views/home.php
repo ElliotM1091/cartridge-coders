@@ -13,16 +13,16 @@
 					<button type="button" class="btn categorybar" ng-click="category('atari')">ATARI</button>
 				</div>
 				<div class="btn-group" role="group">
-					<button type="button" class="btn categorybar"> ng-click="category('')NES</button>
+					<button type="button" class="btn categorybar" ng-click="category('nes')">NES</button>
 				</div>
 				<div class="btn-group" role="group">
-					<button type="button" class="btn categorybar" ng-click="category('')>Super NES</button>
+					<button type="button" class="btn categorybar" ng-click="category('Super NES')">Super NES</button>
 				</div>
 				<div class="btn-group" role="group">
-					<button type="button" class="btn categorybar" ng-click="category('')>N64</button>
+					<button type="button" class="btn categorybar" ng-click="category('Nintendo 64')">N64</button>
 				</div>
 				<div class="btn-group" role="group">
-					<button type="button" class="btn categorybar" ng-click="category('')>Sega</button>
+					<button type="button" class="btn categorybar" ng-click="category('Sega')">Sega</button>
 				</div>
 				<div class="btn-group" role="group">
 					<button type="button" class="btn categorybar">Gameboy</button>
@@ -52,6 +52,7 @@
 		<div class="form-group">
 			<!--					<label >Search</label>-->
 			<input type="text" size="42" ng-model="search" class="form-control" placeholder="Search">
+
 		</div>
 	</form>
 	</div>
