@@ -1,4 +1,4 @@
-<div class="container">
+
 	<div class="row row-flex">
 
 		<div ng-repeat="feedback in feedbacks"
@@ -14,5 +14,5 @@
 	</div>
 </div>
 
-</div>
+
 

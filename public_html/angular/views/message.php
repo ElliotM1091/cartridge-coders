@@ -1,4 +1,4 @@
-<div class="container">
+
 	<div class="row row-flex">
 
 		<div ng-repeat="message in messages"
@@ -14,4 +14,3 @@
 	</div>
 </div>
 
-</div>
