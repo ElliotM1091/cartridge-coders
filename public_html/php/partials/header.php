@@ -35,13 +35,25 @@ $PREFIX = str_repeat("../", 3);
 
 
 
-				<div class="col-md-2"><?php if (isset($_SESSION["sessionaccountid"])) {
+
+				<div class="col-md-2" ng-controller="PaypalController">
+					<?php if (isset($_SESSION["sessionaccountid"])) {
+//						if is logged in
 						echo "Logout";
+//						if is logged in
 					} else {
-						echo "Login";
+//						if is not logged in
+						?>
+						<a ng-click="loadPaypal();">Login&#160;&#160;&#160;<i class="fa fa-user fa-2x" aria-hidden="true"></i></a>
+					</li>
+
+
+						<?php;
+//						if is not logged in
 					}
 					?>
 				</div>
+
 
 
 
