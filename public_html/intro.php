@@ -1,3 +1,10 @@
+<?php
+/*grab current directory*/
+$CURRENT_DIR = __DIR__;
+/*set page title here*/
+$PAGE_TITLE = "MY PAGE TITLE";
+?>
+
 <?php require_once("php/partials/head-utils.php"); ?>
 <link rel="stylesheet" href="css/style.css" type="text/css">
 <link rel="stylesheet" href="css/style2.css" type="text/css">

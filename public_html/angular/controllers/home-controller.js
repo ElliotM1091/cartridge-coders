@@ -1,6 +1,7 @@
 app.controller("HomeController", ["$location", "$scope", "ProductImageService", function($location, $scope, ProductImageService) {
 	// $scope.collapseAddForm = true;
 	$scope.products = [];
+	$scope.search = "";
 
 
 	/**
@@ -18,6 +19,11 @@ app.controller("HomeController", ["$location", "$scope", "ProductImageService", 
 					}
 				}});
 	};
+	
+	$scope.category = function(name) {
+		$scope.search = name;
+	};
+	
 	if($scope.products.length === 0) {
 		$scope.products = $scope.getProducts();
 	}

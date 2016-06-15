@@ -1,5 +1,50 @@
 
 <!-- contents -->
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="btn-group btn-group-justified " role="group" aria-label="...">
+				<div class="btn-group " role="group">
+					<button type="button" class="btn categorybar" ng-click="category('')">All</button>
+				</div>
+				<div class="btn-group" role="group">
+					<button type="button" class="btn categorybar" ng-click="category('atari')">ATARI</button>
+				</div>
+				<div class="btn-group" role="group">
+					<button type="button" class="btn categorybar"> ng-click="category('')NES</button>
+				</div>
+				<div class="btn-group" role="group">
+					<button type="button" class="btn categorybar" ng-click="category('')>Super NES</button>
+				</div>
+				<div class="btn-group" role="group">
+					<button type="button" class="btn categorybar" ng-click="category('')>N64</button>
+				</div>
+				<div class="btn-group" role="group">
+					<button type="button" class="btn categorybar" ng-click="category('')>Sega</button>
+				</div>
+				<div class="btn-group" role="group">
+					<button type="button" class="btn categorybar">Gameboy</button>
+				</div>
+				<div class="btn-group" role="group">
+					<button type="button" class="btn categorybar">GBA</button>
+				</div>
+				<div class="btn-group" role="group">
+					<button type="button" class="btn categorybar">GBA DS</button>
+				</div>
+				<div class="btn-group" role="group">
+					<button type="button" class="btn categorybar">Other</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
 <section id="feature" class="p-y-4" >
 	<div class="row">
 
