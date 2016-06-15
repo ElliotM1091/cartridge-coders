@@ -79,17 +79,12 @@
 					<div class="col-md-1"><i class="fa fa-trash fa-2x"></i><br>Delete<br><br><i class="fa fa-pencil fa-2x"></i><br>Edit</div>
 				</div>
 			</div>
-
-
-
-
-
 			</div>
 			</div>
 		</div>
 	</div>
 	</div>
-	<?php require_once("../php/partials/footer.php"); ?>
+	<?php require_once("../../php/partials/footer.php"); ?>
 </body>
 </html>
 
