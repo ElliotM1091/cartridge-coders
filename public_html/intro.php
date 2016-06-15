@@ -17,6 +17,10 @@ $PAGE_TITLE = "MY PAGE TITLE";
 			</div>
 		</div>
 	</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<img class="erd" src="image/erd.svg" alt="ERD">
+	<br><br><br><br><br><br><br>
+
 </body>
 </html>
 

@@ -20,10 +20,10 @@ $PREFIX = str_repeat("../", 3);
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
 				<div class="row topbarcss" align="left">
-					<div class="col-md-5"><a href="index.php"><h1>ROMuLess</h1></a></div>
-					<div class="col-md-6"><?php if(isset($_SESSION["sessionaccountid"])) {
+					<div class="col-md-3"><a href="index.php"><h1>ROMuLess</h1></a></div>
+					<div class="col-md-8"><?php if(isset($_SESSION["sessionaccountid"])) {
 							echo '
-						<p><br><br><a href="createProduct">Create Product |</a><a href="sendMessage"> Send Message |</a><a href="sendFeedback"> Feedback |</a><a href="viewFeedback">View Feedback |</a><a href="viewMessages">View Messages </a><!--<a href="profile"> Account</a>--></li>
+						<p><br><br><a href="createProduct">Create Product |</a><a href="sendMessage"> Send Message |</a><a href="sendFeedback"> Feedback |</a><a href="viewFeedback"> View Feedback |</a><a href="viewMessages"> View Messages </a><!--<a href="profile"> Account</a>--></li>
 						</p>';
 						} else {
 							echo "";
