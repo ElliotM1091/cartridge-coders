@@ -90,7 +90,6 @@
 							<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1"
 								  height="1">
 						</form>
-						</p>
 					</div>
 				</div>
 			</div>
