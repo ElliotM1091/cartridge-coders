@@ -14,41 +14,44 @@
 $PREFIX = str_repeat("../", 3);
 ?>
 <!-- header -->
-<header class="topbarcss">
-<!------------------------------------------------------------------------------------------------->
-	<div class="container" style="background-color: black">
-		<div class="panel topbarcss" style="background-color: black">
-			<div class="row topbarcss" align="left">
-				<div class="col-md-5"><a href="index.php"><h1>ROMuLess</h1></a></div>
-				<div class="col-md-6"><?php if (isset($_SESSION["sessionaccountid"])) {
-						echo'
+<header class="p-y-4">
+	<div class="container">
+		<!------------------------------------------------------------------------------------------------->
+		<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+				<div class="row topbarcss" align="left">
+					<div class="col-md-5"><a href="index.php"><h1>ROMuLess</h1></a></div>
+					<div class="col-md-6"><?php if(isset($_SESSION["sessionaccountid"])) {
+							echo '
 						<p><br><br><a href="createProduct">Create Product </a>|<a href="sendMessage"> Send Message </a>|<a href="sendFeedback"> Feedback</a></li>
 						</p>';
-					} else {
-						echo "";
-					}
-					?>
-				</div>
-				<div class="col-md-1" ng-controller="PaypalController">
-					<?php if (isset($_SESSION["sessionaccountid"])) {
+						} else {
+							echo "";
+						}
+						?>
+					</div>
+					<div class="col-md-1" ng-controller="PaypalController">
+						<?php if(isset($_SESSION["sessionaccountid"])) {
 //						if is logged in
-						echo'
+							echo '
 						<a ng-click="session_destroy();"><i class="fa fa-user fa-3x"></i><br>Log out</a>
 						';
 //						if is logged in
-					} else {
+						} else {
 //						if is not logged in
-						echo'
+							echo '
 						<a ng-click="loadPaypal();"><i class="fa fa-user fa-3x"></i><br>Login</a>
 						';
 //						if is not logged in
-					}
-					?>
+						}
+						?>
+					</div>
 				</div>
 			</div>
+		</nav>
 		</div>
 	</div>
-<!--	---------------------------------------------------------------------------------------------->
+	<!--	---------------------------------------------------------------------------------------------->
 
 	<div class="container">
 		<div class="row">
