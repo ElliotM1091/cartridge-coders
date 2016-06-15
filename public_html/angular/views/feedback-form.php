@@ -21,6 +21,13 @@
 			</div>
 		</div>
 
+		<p><label><input type="radio" ng-model="newFeedback.feedbackRating" value="1" /><i class="fa fa-star" aria-hidden="true"></i></label>
+			<label><input type="radio" ng-model="newFeedback.feedbackRating" value="2" /><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></label>
+			<label><input type="radio" ng-model="newFeedback.feedbackRating" value="3" /><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></label>
+			<label><input type="radio" ng-model="newFeedback.feedbackRating" value="4" /><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></label>
+			<label><input type="radio" ng-model="newFeedback.feedbackRating" value="5" /><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></label>
+			</p>
+
 		<button type="submit" class="btn btn-info btn-lg" ng-disabled="addFeedbackForm.$invalid"><i
 				class="fa fa-share"></i> Feedback
 		</button>

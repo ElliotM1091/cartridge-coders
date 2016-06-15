@@ -38,6 +38,18 @@ app.config(function($routeProvider, $locationProvider) {
 			templateUrl : 'angular/views/upload-image.php'
 		})
 
+		// route for viewing messages
+		.when('/viewMessages', {
+			controller  : 'MessageViewController',
+			templateUrl : 'angular/views/message.php'
+		})
+
+		// route for viewing feedback
+		.when('/viewFeedback', {
+			controller  : 'FeedbackViewController',
+			templateUrl : 'angular/views/feedback.php'
+		})
+
 		// otherwise redirect to home
 		.otherwise({
 			redirectTo: "/"

@@ -97,6 +97,8 @@ $PREFIX = str_repeat("../", $DEPTH_DIFFERENCE);
 		<script type="text/javascript" src="angular/controllers/product-controller.js"></script>
 		<script type="text/javascript" src="angular/controllers/message-controller.js"></script>
 		<script type="text/javascript" src="angular/controllers/feedback-controller.js"></script>
+		<script type="text/javascript" src="angular/controllers/message-view-controller.js"></script>
+		<script type="text/javascript" src="angular/controllers/feedback-view-controller.js"></script>
 
 		<title>ROMuLess</title>
 	</head>
