@@ -1,7 +1,7 @@
 /**
  * Defines a constant which holds the base url of the API
  */
-app.constant("FEEDBACK_ENDPOINT", "php/api/feedback/");
+app.constant("FEEDBACK_ENDPOINT", "php/apis/feedback/");
 
 /**
  * Initializes our feedback service
