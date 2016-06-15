@@ -6,7 +6,6 @@ $PAGE_TITLE = "MY PAGE TITLE";
 ?>
 <?php require_once("../../php/partials/head-utils.php"); ?>
 <?php require_once("../../php/partials/header.php"); ?>
-<link rel="stylesheet" href="../../css/style.css" type="text/css">
 <link rel="stylesheet" href="../../css/style2.css" type="text/css">
 
 <body ng-controller="HomeController">

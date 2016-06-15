@@ -4,7 +4,7 @@
 
 
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-xs-12">
 			<div class="btn-group btn-group-justified " role="group" aria-label="...">
 				<div class="btn-group " role="group">
 					<button type="button" class="btn categorybar" ng-click="category('')">All</button>
