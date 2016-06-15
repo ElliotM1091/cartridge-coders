@@ -10,8 +10,13 @@ require_once("/etc/apache2/capstone-mysql/encrypted-config.php");
  * @author Marlan Ball <wyndows@earthlink.net> based on code by Robin Nixon
  **/
 
+//prepare an empty reply
+$reply = new stdClass();
+$reply->status = 200;
+$reply->data = null;
 
-if(isset($_FILES['image']['name'])) {
+var_dump($_FILES['image']);
+if(isset($_FILES['image'])) {
 	$tmpFileName = $_FILES['image']['tmp_name'];
 //move_uploaded_file($_FILES['image']['tmp_name'], $saveto);
 	$typeok = TRUE;
@@ -40,11 +45,6 @@ if(isset($_FILES['image']['name'])) {
 			if(session_status() !== PHP_SESSION_ACTIVE) {
 				session_start();
 			}
-
-//prepare an empty reply
-			$reply = new stdClass();
-			$reply->status = 200;
-			$reply->data = null;
 
 //set XSRF cookie
 			setXsrfCookie();
@@ -85,7 +85,7 @@ if(isset($_FILES['image']['name'])) {
 
 				$reply->data = $id;
 
-				$saveto = "/var/www/html/public_html/cartridge-coders/product-" . "$id.jpg";
+				$saveto = "/var/www/html/public_html/cartridge-coders/product-$id.jpg";
 				move_uploaded_file($_FILES['image']['tmp_name'], $saveto);
 
 				list($w, $h) = getimagesize($saveto);
@@ -127,10 +127,20 @@ if(isset($_FILES['image']['name'])) {
 		}
 
 // encode and return reply to front end caller
-		echo json_encode($reply);
 	} // update reply with exception information
 }
-
+echo json_encode($reply);
+//
+//echo '<div class="container">
+//	<form method=\'post\' action=\'index.php\' enctype=\'multipart/form-data\'>
+//		<h3>Upload an Image</h3>
+//		<br>
+//		Image: <input type=\'file\' name=\'image\' size=\'14\'>
+//		<input type=\'submit\' value=\'Save Image\'>
+//	</form>
+//</div>'
 
 
 ?>
+
+
